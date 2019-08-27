@@ -1,0 +1,17 @@
+.main-info {
+    &-wrap {
+        padding: 66px 0 51px 0;
+    }
+    &__title {
+        font-family: 'Tahoma', sans-serif;  
+        font-size: 30px;
+        color: #3d3d3d;
+        padding-bottom: 30px;
+    }
+    &__text {
+        font-family: 'Tahoma', sans-serif;  
+        font-size: 14px;
+        line-height: 30px;
+        color: #3d3d3d;
+    }
+}

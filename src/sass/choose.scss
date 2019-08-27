@@ -1,0 +1,86 @@
+.choose {
+    &-wrap {
+        padding: 84px;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    &-item {
+        flex-basis: 32%;
+        padding: 33px 29px;
+        height: 450px;
+        border: 1px solid #bebebe;
+        transition: 0.3s;
+        &:nth-child(3) {
+            .choose-item {
+                &__description {
+                    width: 100%;
+                }
+            }
+        }
+        &__wrap {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+        &__icon {
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 20px;
+        }
+        &__title {
+            color: #005086;
+            font-family: Tahoma;
+            font-size: 24px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        &__description {
+            width: 200px;
+            font-size: 27px;
+            font-family: 'Helvetica Neue LTCYR - Bd Cond';
+            color: #3d3d3d;
+            line-height: 35px;
+            &:last-child {
+                width: 100%;
+            }
+            &__yellow {
+                font-size: 45px;
+                color: #f0b30d;
+            }
+            &__black {
+                font-family: sans-serif;
+                font-size: 45px;
+            }
+        }
+        &__button {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            color: #0060a0;
+            padding: 15px;
+            border: 1px solid #0060a0;
+            background-color: white;
+            font-size: 17px;
+            width: 100%;
+            transition: 0.3s;
+            &:hover {
+                background-color: #0060a0;
+                color: white;
+            }
+        }
+        &__explain {
+            padding-top: 19px;
+            color: #3d3d3d;
+            font-family: Tahoma;
+            font-size: 16px;
+            width: 100%;
+            line-height: 22px;
+            
+        }
+        &:hover {
+            box-shadow: 0px 0px 10px rgba(black, 0.3);
+        }
+    }
+}

@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+.container {
+    width: 1170px;
+    margin: auto;
+}
+.button {
+    font-family: 'Tahoma', sans-serif;
+    cursor: pointer;
+    text-transform: uppercase;
+
+}
+
+@media (max-width: 1199px) {
+    .container {
+        max-width: 960px;
+    }
+}
+@media (max-width: 991px) {
+    .container {
+        max-width: 750px; 
+
+    } 
+}
+         
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 100%;
+        padding: 0 20px;
+    }  
+}
+     

@@ -1,0 +1,73 @@
+.banner {
+    height: 570px;
+    width: 100%;
+    background: url(../img/header/banner.png) no-repeat center;
+    background-size: cover;
+    padding-top: 34px;
+    &-title {
+        width: 525px;
+        height: 143px;
+        background: url(../img/header/banner-line.png);
+        background-size: cover;
+        position: relative;
+        padding: 12px 0px 13px 67px;
+        &__text {
+            font-family: 'Helvetica Neue LTCYR - Md Cond', sans-serif;
+            text-transform: uppercase;
+            color: white;
+            letter-spacing: 2.3px;
+            width: 350px;
+            font-size: 52px;
+        }
+    }
+    &-subtitle {
+        padding: 30px 0 32px 67px;
+        width: 350px;
+        &__text {
+            font-family: 'Helvetica Neue LTCYR - Md Cond', sans-serif;
+            color: #3d3d3d;
+            font-size: 42px;
+            line-height: 45px;
+            padding-bottom: 32px;
+        }
+        &__button {
+            font-size: 20px;
+            color: white;
+            background-color: #006eb6;
+            padding: 14px 27px;
+            border: none;
+
+        }
+    }
+    &-bottom {
+        width: 100%;
+        background: rgba(white, 0.91);
+        padding: 20px 67px 24px 67px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        &-item {
+            flex-basis: 30%;
+            &__text {
+                font-family: 'Helvetica Neue LTCYR - Bd Cond';
+                font-size: 31px;
+                text-align: center;
+                color: #404040;
+                &__yellow {
+                    font-size: 55px;
+                    color: #f0b30d;
+                }
+                &:before {
+                    content: '';
+                    display: inline-block;
+                    margin-right: 35px;
+                    width: 13px;
+                    border-radius: 50%;
+                    height: 13px;
+                    margin-bottom: 10px;
+                    background: #8c8c8c;
+                }
+            }
+        }
+    }
+}
