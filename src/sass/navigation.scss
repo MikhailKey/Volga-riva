@@ -51,10 +51,18 @@
         font-size: 14px;
         display: flex;
         flex-wrap: wrap;
-        &__item {
+        &-item {
             cursor: pointer;
             flex-basis: 45%;
             color: #f0b30d;
+            display: flex;
+            &__arrow {
+                width: 10px;
+                height: auto;
+                fill: #f0b30d;
+                margin-top: 2px;
+                margin-left: 10px;
+            }
         }
     }
     &-button {

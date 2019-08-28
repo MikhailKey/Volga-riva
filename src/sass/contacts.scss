@@ -1,0 +1,67 @@
+.contacts {
+    width: 100%;
+    background-color: #004b7e;
+    &-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 0;
+        flex-wrap: wrap;
+    }
+    &-logo {
+        flex-basis: 40%;
+        text-align: left;
+    }
+    &-info {
+        padding: 20px 90px;
+        flex-basis: 50%;
+        background-color: #175987;
+        display: flex;
+        justify-content: flex-end;
+        &-town {
+            flex-basis: 50%;
+            color: #ffffff;
+            position: relative;
+            font-family: Tahoma;
+            font-size: 18px;
+            transition: 0.3s;
+            cursor: pointer;
+            display: flex;
+            &:after {
+                position: absolute;
+                top: 50%;
+                content: '';
+                display: inline-block;
+                width: 45%;
+                height: 2px;
+                background: white;
+            }
+            &__arrow {
+                width: 10px;
+                height: 10px;
+                fill: white;
+                margin-top: 8px;
+                margin-left: 10px;
+            }
+        }
+        &-adress {
+            flex-basis: 50%;
+            p {
+                color: #ffffff;
+                font-family: 'Tahoma', sans-serif;
+                font-size: 14px;
+                padding-bottom: 10px;
+            }
+            &-number {
+                display: flex;
+                &__phone {
+                    margin-left: 15px;
+                    display: block;
+                    font-weight: bold;
+                    color: #ffffff;
+                    font-family: 'Tahoma', sans-serif;
+                }
+            }
+        }
+    }
+}
