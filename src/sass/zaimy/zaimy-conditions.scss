@@ -1,0 +1,82 @@
+.zaimy-conditions {
+    width: 100%;
+    background-color: #00548d;
+    padding-bottom: 50px;
+    &__title {
+        text-align: center;
+        color: #fefefe;
+        font-family: Tahoma;
+        font-size: 36px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.89px;
+        padding: 132px 0 70px 0;
+    }
+    &-list {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        padding-bottom: 100px;
+        &-item {
+            flex-basis: 25%; 
+            height: 140px;
+            position: relative;
+            &__title {
+                color: #ffffff;
+                font-family: "Helvetica Neue LTCYR - Bd Cond", sans-serif;
+                font-size: 33px;
+                font-weight: 400;
+                margin-bottom: 23px;
+                &__padding {
+                    padding-top: 10px;
+                }
+                &__bottom {
+                    padding-bottom: 38px;
+                }
+                &__large {
+                    font-size: 40px;
+                }
+            }
+            &__text {
+                color: #ffffff;
+                width: 240px;
+                font-family: Tahoma;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 21.99px;
+            }
+            &__dots {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+            }
+            &__bottomdots {
+                position: absolute;
+                bottom: -25%;
+                right: 0;
+            }
+        }
+    }
+    &-video {
+        margin: 40px 0;
+        padding: 10px 12px;
+        background: #004d82;
+    }
+    &-button {
+        border: 1px solid white;
+        background: none;
+        color: white;
+        text-transform: uppercase;
+        padding: 18px 34px;
+        font-family: Tahoma;
+        cursor: pointer;
+        font-size: 20px;
+        width: 265px;
+        line-height: 24px;
+        &__wrap {       
+            display: flex;
+            justify-content: flex-end;  
+        }
+    }
+}

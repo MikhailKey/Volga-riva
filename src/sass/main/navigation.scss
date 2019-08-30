@@ -31,7 +31,8 @@
             &:after {
                 position: absolute;
                 bottom: 1px;
-                left: 0;
+                left: 50%;
+                transform: translateX(-50%);
                 content: '';
                 width: 0%;
                 height: 4px;
@@ -101,6 +102,7 @@
                 list-style: none;
                 text-transform: uppercase;
                 margin: 0 50px;
+                position: relative;
                 &:nth-child(3) {
                     margin-right: 0;
                 }
@@ -110,7 +112,24 @@
                     &:hover {
                         color: #006eb6;
                     }
-                }    
+                }
+                &:after {
+                    position: absolute;
+                    bottom: -80%;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    content: '';
+                    width: 0%;
+                    height: 4px;
+                    background: #006eb6;
+                    transition: 0.3s
+                }
+                &:hover {
+                    color: #006eb6;
+                    &:after {
+                            width: 120%;
+                        }
+                } 
             }
         }
         &__logo {

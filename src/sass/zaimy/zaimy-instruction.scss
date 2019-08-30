@@ -1,0 +1,51 @@
+.zaimy-instruction {
+    padding-bottom: 120px;
+    border-bottom: 1px solid #c4c4c4;
+    &__title {
+        color: #3d3d3d;
+        font-family: 'Tahoma', sans-serif;
+        font-size: 36px;
+        text-transform: uppercase;
+        text-align: center;
+        padding: 102px 0 53px 0;
+
+    }
+    &-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        &-item {
+            &-info {
+                padding: 0 30px 30px 30px;
+            }
+            flex-basis: 24%;
+            border: 1px solid #d1d1d1;
+            &__icon {
+                display: block;
+                height: 165px;
+                width: auto;
+                margin: 0 auto;
+                padding: 31px 31px 50px 31px;
+            }
+            &__number {
+                float: left;
+                font-family: "Helvetica Neue LTCYR - Bd Cond";
+                padding-right: 10px;
+                height: 45px;
+                font-size: 45px;
+                color: #f0b30d;
+                letter-spacing: 1.47px;
+            }
+            &__text {
+                padding-top: 10px;
+                color: #3d3d3d;
+                font-family: Tahoma;
+                font-size: 14px;
+                line-height: 22px;
+                &__bold {
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}

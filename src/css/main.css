@@ -1,7 +1,66 @@
+@font-face {
+  font-family: 'Tahoma';
+  src: url("../fonts/Tahoma.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue LTCYR - Md Cond';
+  src: url("../fonts/Helvetica Neue LT Cyrillic 57 Condensed.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue LTCYR - Bd Cond';
+  src: url("../fonts/Helvetica Neue LT Cyrillic 77 Bold Condensed.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 1170px;
+  margin: auto;
+}
+
+.button {
+  font-family: 'Tahoma', sans-serif;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+@media (max-width: 1199px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (max-width: 991px) {
+  .container {
+    max-width: 750px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+}
 .banner {
   height: 570px;
   width: 100%;
-  background: url("../img/header/banner.png") no-repeat center;
+  background: url("img/header/banner.png") no-repeat center;
   background-size: cover;
   padding-top: 34px;
 }
@@ -9,7 +68,7 @@
 .banner-title {
   width: 525px;
   height: 143px;
-  background: url("../img/header/banner-line.png");
+  background: url("img/header/banner-line.png");
   background-size: cover;
   position: relative;
   padding: 12px 0px 13px 67px;
@@ -96,7 +155,7 @@
 
 .calc-item {
   flex-basis: 50%;
-  padding: 68px 60px;
+  padding: 68px 60px 68px 120px;
 }
 
 .calc-item__title {
@@ -449,26 +508,6 @@
   color: #ffffff;
   font-family: 'Tahoma', sans-serif;
 }
-@font-face {
-  font-family: 'Tahoma';
-  src: url("../fonts/Tahoma.ttf");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Helvetica Neue LTCYR - Md Cond';
-  src: url("../fonts/Helvetica Neue LT Cyrillic 57 Condensed.ttf");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Helvetica Neue LTCYR - Bd Cond';
-  src: url("../fonts/Helvetica Neue LT Cyrillic 77 Bold Condensed.ttf");
-  font-weight: normal;
-  font-style: normal;
-}
 .footnav {
   width: 100%;
   background-color: #e3e2df;
@@ -536,45 +575,6 @@
 .footnav-navigation-row__link:hover {
   color: #175987;
 }
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-a {
-  text-decoration: none;
-}
-
-.container {
-  width: 1170px;
-  margin: auto;
-}
-
-.button {
-  font-family: 'Tahoma', sans-serif;
-  cursor: pointer;
-  text-transform: uppercase;
-}
-
-@media (max-width: 1199px) {
-  .container {
-    max-width: 960px;
-  }
-}
-
-@media (max-width: 991px) {
-  .container {
-    max-width: 750px;
-  }
-}
-
-@media (max-width: 768px) {
-  .container {
-    max-width: 100%;
-    padding: 0 20px;
-  }
-}
 .main-info-wrap {
   padding: 66px 0 51px 0;
 }
@@ -633,7 +633,8 @@ a {
 .navigation-list__item:after {
   position: absolute;
   bottom: 1px;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
   content: '';
   width: 0%;
   height: 4px;
@@ -713,6 +714,7 @@ a {
   list-style: none;
   text-transform: uppercase;
   margin: 0 50px;
+  position: relative;
 }
 
 .navigation-bottom-menu__item:nth-child(3) {
@@ -726,6 +728,26 @@ a {
 
 .navigation-bottom-menu__item a:hover {
   color: #006eb6;
+}
+
+.navigation-bottom-menu__item:after {
+  position: absolute;
+  bottom: -80%;
+  left: 50%;
+  transform: translateX(-50%);
+  content: '';
+  width: 0%;
+  height: 4px;
+  background: #006eb6;
+  transition: 0.3s;
+}
+
+.navigation-bottom-menu__item:hover {
+  color: #006eb6;
+}
+
+.navigation-bottom-menu__item:hover:after {
+  width: 120%;
 }
 
 .navigation-bottom__logo {
@@ -762,4 +784,370 @@ a {
 .navigation-bottom-menu__line:nth-child(3) {
   bottom: 0px;
   left: 0px;
+}
+.zaimy-banner {
+  width: 100%;
+  position: relative;
+  height: auto;
+  background: url("img/zaimy/header.png") no-repeat center;
+  background-size: cover;
+  padding: 67px 0;
+}
+
+.zaimy-banner-wrap {
+  position: relative;
+  width: 80%;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 40px 34px;
+}
+
+.zaimy-banner-content {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #cacaca;
+  border-bottom: none;
+  padding: 170px 60px 30px 60px;
+}
+
+.zaimy-banner-title {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 115px;
+  background: url("img/zaimy/title.png") no-repeat center;
+  background-size: cover;
+}
+
+.zaimy-banner-title__text {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  font-family: "Helvetica Neue LTCYR - Md Cond", sans-serif;
+  font-size: 46px;
+  text-transform: uppercase;
+}
+
+.zaimy-banner-count {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.zaimy-banner-calc {
+  flex-basis: 50%;
+}
+
+.zaimy-banner-options {
+  flex-basis: 50%;
+  padding-left: 50px;
+}
+
+.zaimy-banner-options__text {
+  color: #3d3d3d;
+  text-transform: uppercase;
+  font-family: 'Tahoma', sans-serif;
+  font-size: 15px;
+  padding-bottom: 23px;
+}
+
+.zaimy-banner-options__button {
+  text-transform: uppercase;
+  position: relative;
+  color: #3d3d3d;
+  font-family: Tahoma;
+  font-size: 14px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  margin-bottom: 23px;
+}
+
+.zaimy-banner-options__button:after {
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: #006eb6;
+  transition: 0.3s;
+}
+
+.zaimy-banner-options__button:hover {
+  color: #006eb6;
+}
+
+.zaimy-banner-options__button:hover:after {
+  width: 100%;
+}
+
+.zaimy-banner-services {
+  width: 100%;
+  display: flex;
+}
+
+.zaimy-banner-service {
+  width: calc(100% / 3);
+  position: relative;
+  border-top: 1px solid #cacaca;
+  height: 350px;
+  padding: 40px 20px;
+}
+
+.zaimy-banner-service:hover {
+  border: 1px solid #cacaca;
+  border-top: none;
+}
+
+.zaimy-banner-service__icon {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.zaimy-banner-service__title {
+  color: #005086;
+  font-family: 'Tahoma', sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.zaimy-banner-service__text {
+  color: #3d3d3d;
+  font-family: Tahoma;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.zaimy-banner-service__text__yellow {
+  color: #f0b30d;
+  font-size: 20px;
+}
+
+.zaimy-banner-service__button {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #0060a0;
+  padding: 15px;
+  border: 1px solid #0060a0;
+  background-color: white;
+  font-size: 17px;
+  width: 85%;
+  transition: 0.3s;
+}
+
+.zaimy-banner-service__button:hover {
+  background-color: #0060a0;
+  color: white;
+}
+.zaimy-conditions {
+  width: 100%;
+  background-color: #00548d;
+  padding-bottom: 50px;
+}
+
+.zaimy-conditions__title {
+  text-align: center;
+  color: #fefefe;
+  font-family: Tahoma;
+  font-size: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.89px;
+  padding: 132px 0 70px 0;
+}
+
+.zaimy-conditions-list {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding-bottom: 100px;
+}
+
+.zaimy-conditions-list-item {
+  flex-basis: 25%;
+  height: 140px;
+  position: relative;
+}
+
+.zaimy-conditions-list-item__title {
+  color: #ffffff;
+  font-family: "Helvetica Neue LTCYR - Bd Cond", sans-serif;
+  font-size: 33px;
+  font-weight: 400;
+  margin-bottom: 23px;
+}
+
+.zaimy-conditions-list-item__title__padding {
+  padding-top: 10px;
+}
+
+.zaimy-conditions-list-item__title__bottom {
+  padding-bottom: 38px;
+}
+
+.zaimy-conditions-list-item__title__large {
+  font-size: 40px;
+}
+
+.zaimy-conditions-list-item__text {
+  color: #ffffff;
+  width: 240px;
+  font-family: Tahoma;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21.99px;
+}
+
+.zaimy-conditions-list-item__dots {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.zaimy-conditions-list-item__bottomdots {
+  position: absolute;
+  bottom: -25%;
+  right: 0;
+}
+
+.zaimy-conditions-video {
+  margin: 40px 0;
+  padding: 10px 12px;
+  background: #004d82;
+}
+
+.zaimy-conditions-button {
+  border: 1px solid white;
+  background: none;
+  color: white;
+  text-transform: uppercase;
+  padding: 18px 34px;
+  font-family: Tahoma;
+  cursor: pointer;
+  font-size: 20px;
+  width: 265px;
+  line-height: 24px;
+}
+
+.zaimy-conditions-button__wrap {
+  display: flex;
+  justify-content: flex-end;
+}
+.zaimy-count {
+  background-color: #eeeeee;
+}
+
+.zaimy-count-slider {
+  width: 100%;
+  height: 570px;
+  background: url("img/zaimy/zaimy-slide-bg.png") no-repeat center;
+}
+
+.zaimy-count-content-numbers {
+  position: relative;
+  width: 500px;
+  margin: 0 auto;
+  padding-top: 70px;
+  display: flex;
+  justify-content: center;
+}
+
+.zaimy-count-content-numbers__item {
+  width: 64px;
+  height: 105px;
+  margin: 0 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #b2b2b2;
+  border-radius: 10px;
+  background: linear-gradient(to top, #dcdad6 0%, #ffffff 100%);
+  color: #cc0026;
+  font-family: "Helvetica Neue LTCYR - Bd Cond", sans-serif;
+  font-size: 85px;
+}
+
+.zaimy-count-content__text {
+  position: absolute;
+  top: 55px;
+  left: 105%;
+  transform: translateX(-50%);
+  width: 234px;
+  color: #3d3d3d;
+  font-family: "Helvetica Neue LTCYR - Md Cond";
+  font-size: 36px;
+}
+.zaimy-feedback {
+  width: 100%;
+  height: 400px;
+}
+.zaimy-instruction {
+  padding-bottom: 120px;
+  border-bottom: 1px solid #c4c4c4;
+}
+
+.zaimy-instruction__title {
+  color: #3d3d3d;
+  font-family: 'Tahoma', sans-serif;
+  font-size: 36px;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 102px 0 53px 0;
+}
+
+.zaimy-instruction-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.zaimy-instruction-list-item {
+  flex-basis: 24%;
+  border: 1px solid #d1d1d1;
+}
+
+.zaimy-instruction-list-item-info {
+  padding: 0 30px 30px 30px;
+}
+
+.zaimy-instruction-list-item__icon {
+  display: block;
+  height: 165px;
+  width: auto;
+  margin: 0 auto;
+  padding: 31px 31px 50px 31px;
+}
+
+.zaimy-instruction-list-item__number {
+  float: left;
+  font-family: "Helvetica Neue LTCYR - Bd Cond";
+  padding-right: 10px;
+  height: 45px;
+  font-size: 45px;
+  color: #f0b30d;
+  letter-spacing: 1.47px;
+}
+
+.zaimy-instruction-list-item__text {
+  padding-top: 10px;
+  color: #3d3d3d;
+  font-family: Tahoma;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.zaimy-instruction-list-item__text__bold {
+  font-weight: 700;
 }
