@@ -1,8 +1,17 @@
-.zaimy-conditions {
+.conditions {
     width: 100%;
-    background: #00548d url(../img/zaimy/conditions-bg.png) no-repeat center top;
-    background-size: 150%;
-    padding-bottom: 50px;
+    &-top {
+        width: 100%;
+        height: 40px;
+    }
+    &-bg-blue {
+        background: #00548d url(../img/zaimy/conditions-bg.png) no-repeat center top;
+        background-size: 150%;
+    }
+    &-bg-green {
+        background: #278d08 url(../img/b-zaimy/conditions-green.png) no-repeat center top;
+        background-size: 100%;
+    }
     &__title {
         text-align: center;
         color: #fefefe;
@@ -67,7 +76,12 @@
     &-video {
         margin: 40px 0;
         padding: 10px 12px;
-        background: #004d82;
+        &__blue {
+            background: #004d82;
+        }
+        &__green {
+            background: #1b7000;
+        }
     }
     &-button {
         border: 1px solid white;
@@ -80,6 +94,7 @@
         font-size: 20px;
         width: 265px;
         line-height: 24px;
+        margin-bottom: 50px;
         &__wrap {       
             display: flex;
             justify-content: flex-end;  

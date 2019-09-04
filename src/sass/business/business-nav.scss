@@ -102,7 +102,7 @@
             &__item {
                 list-style: none;
                 text-transform: uppercase;
-                margin: 0 50px;
+                margin: 0 30px;
                 position: relative;
                 &:nth-child(3) {
                     margin-right: 0;
@@ -121,14 +121,14 @@
                     transform: translateX(-50%);
                     content: '';
                     width: 0%;
-                    height: 4px;
+                    height: 2px;
                     background: #259b00;
                     transition: 0.3s
                 }
                 &:hover {
                     color: #259b00;
                     &:after {
-                            width: 120%;
+                            width: 110%;
                         }
                 } 
             }
@@ -168,7 +168,7 @@
     &__hamburger {
         cursor: pointer;
         height: 15px;
-        margin-left: 30px;
+        margin-left: 10px;
         position: relative;
         width: 20px;
     }

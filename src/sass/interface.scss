@@ -15,7 +15,10 @@ a {
     cursor: pointer;
     text-transform: uppercase;
 }
-
+.button-wrap {
+    display: flex;
+    justify-content: center;
+}
 @media (max-width: 1199px) {
     .container {
         max-width: 960px;

@@ -1,0 +1,83 @@
+.b-zaimy {
+    &-bg {
+        width: 100%;
+        padding: 40px 0;
+        background: url(../img/b-zaimy/b-zaimy-banner.png) no-repeat center;
+        background-size: cover;
+        position: relative;
+    }
+    &-human {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-30%);
+    }
+    &-content {
+        width: 586px;
+        position: relative;
+    }
+    &-title {
+        background: url(../../img/b-zaimy/b-zaimy-title.png) no-repeat center;
+        background-size: cover;
+        width: 650px;
+        height: 190px;
+        color: #ffffff;
+        text-align: center;
+        font-family: "Helvetica Neue LTCYR - Md Cond", sans-serif;
+        line-height: 50px;
+        padding-top: 30px;
+        h1 {
+            font-size: 60px; 
+            letter-spacing: 1.5px;
+            font-weight: normal;
+        }
+        h3 {
+            font-size: 40px;
+            font-weight: normal;
+        }
+    }
+    &-advantages {
+        margin-top: 150px;
+        width: 650px;
+        height: 130px;
+        background: rgba(white, 0.9);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        left: 0;
+    }
+    &-item {
+        flex-basis: 30%;
+        &:nth-child(1) {
+            padding-left: 30px;
+        }
+        &:nth-child(3) {
+            padding-left: 40px;
+        }
+        &__text {
+            font-family: 'Helvetica Neue LTCYR - Bd Cond';
+            font-size: 31px;
+            text-align: left;
+            color: #404040;
+            &__yellow {
+                font-size: 55px;
+                color: #f0b30d;
+            }
+            &__small {
+                font-size: 20px;
+                font-family: 'Helvetica Neue LTCYR - Bd Cond';
+                text-align: left;
+                color: #404040;
+            }
+        }
+    }
+    &-button {
+        margin-top: 30px;
+        padding: 15px 30px;
+        color: white;
+        font-family: 'Tahoma', sans-serif;
+        font-size: 20px;
+        border: none;
+        background: #259b00;
+    }
+}
