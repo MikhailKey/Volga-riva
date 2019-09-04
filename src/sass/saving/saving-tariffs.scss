@@ -1,0 +1,193 @@
+.saving {
+    &-tariffs {
+        padding: 115px;
+        &-wrap {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            width: 100%;
+            padding: 0px 100px;
+        }
+    }
+    &-tariff {
+        flex-basis: 48%;
+        border: 1px solid #bebebe;
+        padding: 50px 60px;
+        transition: 0.5s;
+        &:hover {
+            box-shadow: 0 0 11px 1px rgba(0, 0, 0, 0.09);
+        }
+        
+        &-option {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            p {
+                color: #3d3d3d;
+                font-family: 'Tahoma', sans-serif;
+                font-size: 24px;
+            }
+        }
+        &__logo {
+            display: block;
+            height: 90px;
+            margin: auto;
+        }
+        h1 {
+            color: #44197c;
+            font-family: 'Tahoma', sans-serif;
+            font-size: 24px;
+            font-weight: 400;
+            text-align: center;
+            padding-top: 16px;
+        }
+        h3 {
+            color: #3d3d3d;
+            font-family: "Helvetica Neue LTCYR - Bd Cond", sans-serif;
+            font-size: 27px;
+            text-align: center;
+            padding: 28px 0;
+            span {
+                color: #f0b30d;
+                font-size: 45px;
+            }
+        }
+        &-button {
+            display: flex;
+            justify-content: center;
+            button {
+                margin-top: 50px;
+                color: #44197c;
+                background: white;
+                border: none;
+                font-size: 17px; 
+                padding: 18px 0;
+                border: 1px solid #44197c;
+                width: 240px;
+                transition: 0.5s;
+                &:hover {
+                    color: white;
+                    background: #44197c;
+                }
+            }
+        }
+    }
+}
+.tariff {
+    &-info {
+        position: absolute;
+        top: -60%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 810px;
+        background-color: white;
+        border: 1px solid #bebebe;
+        box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.07);
+        &-content {
+            padding: 20px 70px 70px 70px;
+        }
+    }
+    &-close {
+        height: 27px;
+        background: #44197c;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        svg {
+            fill: white;
+            height: 16px;
+            width: 16px;
+            cursor: pointer;
+            margin-right: 10px;
+            opacity: 0.5;
+            transition: 0.5s;
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+    &-title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+            padding-right: 40px;
+        }
+        h1 {
+            color: #44197c;
+            font-family: Tahoma;
+            font-size: 36px;
+            font-weight: 400;
+            text-transform: uppercase;
+            line-height: 30.22px;
+            letter-spacing: 0.89px;
+        }
+    }
+    &__description {
+        padding: 35px 0;
+        color: #3d3d3d;
+        font-family: 'Tahoma', sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 30px;
+    }
+    &-table {
+        border-collapse: collapse;
+        width: 100%;
+        box-shadow: 0px 3px 5px rgba(black, 0.2);
+        text-align: center;
+        &__summ {
+            text-align: left;
+            &:before {
+                content: '';
+                display: inline-block;
+                width: 40px;
+                height: 20px;
+            }
+        }        
+        &-title {
+            background: #44197c;
+        }
+        th {
+            color: white;
+            border: none;
+            padding: 10px 10px;
+            font-family: 'Tahoma', sans-serif;
+            font-weight: normal;
+            font-size: 14px;
+        }
+        td {
+            color: #3d3d3d;
+            border: none;
+            padding: 10px 10px;
+            font-family: 'Tahoma', sans-serif;
+            font-weight: normal;
+            font-size: 14px;
+        }
+    }
+    &-list {
+        color: #3d3d3d;
+        font-family: 'Tahoma', sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        padding-left: 30px;
+        padding-top: 50px;
+        li {
+            padding: 10px 0;
+            line-height: 30px;
+            list-style: none;
+            position: relative;
+            &:before {
+                content: '';
+                position: absolute;
+                top: 20px;
+                left: -30px;
+                display: inline-block;
+                height: 10px;
+                width: 10px;
+                background: #44197c;
+            }
+        }
+    }
+}

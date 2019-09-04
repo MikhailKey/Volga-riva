@@ -1,0 +1,122 @@
+.saving {
+    &-button {
+        color: #44197c;
+        background: white;
+        border: 2px solid #44197c;
+        text-transform: uppercase;
+        padding: 13px 50px;
+        font-family: 'Tahoma', sans-serif;
+        font-size: 20px;
+        transition: 0.5s;
+        &:hover {
+            background: #44197c;
+            color: white;
+        }
+        &-wrap {
+            text-align: center;
+        }
+    }
+    &-banner {
+        width: 100%;
+        background: url(../img/saving/saving-banner.png) no-repeat center;
+        background-size: cover;
+        padding: 70px 0;
+        &-content {
+            margin: auto;
+            background: white;
+            width: 911px;
+            position: relative;
+            padding: 250px 100px 40px 100px;
+
+        }
+        &__title {
+            position: absolute;
+            top: 17%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 704px;
+            height: 115px;
+            background: url(../img/saving/saving-title.png) no-repeat center;
+            h1 {
+                color: #ffffff;
+                font-family: "Helvetica Neue LTCYR - Md Cond", sans-serif;
+                font-size: 46px;
+                text-transform: uppercase;
+                font-weight: normal;
+                width: 100%;
+                text-align: center;
+                position: absolute;
+                top: 45%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+        &-info {
+            display: flex;
+            width: 100%;
+            flex-wrap: wrap;
+            padding-bottom: 50px;
+        }
+        
+    }
+    &-calc {
+        flex-basis: 50%;
+    }
+    &-options {
+        margin-top: 7px;
+        flex-basis: 50%;
+        padding-left: 50px;
+        &__text {
+            color: #3d3d3d;
+            text-transform: uppercase;
+            font-family: 'Tahoma', sans-serif;
+            font-size: 15px;
+            padding-bottom: 23px;
+        }
+        &__button {
+            display: block;
+            text-transform: uppercase;
+            position: relative;
+            color: #3d3d3d;
+            font-family: Tahoma;
+            font-size: 14px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            margin-bottom: 23px;        
+            &:after {
+                position: absolute;
+                bottom: -10px;
+                left: 50%;
+                transform: translateX(-50%);
+                content: '';
+                width: 0%;
+                height: 2px;
+                background: #44197c;
+                transition: 0.3s
+            }
+            &:hover {
+                color: #44197c;
+                &:after {
+                        width: 100%;
+                    }
+            }
+        }
+        &__program {
+            color: #44197c;
+            font-family: Tahoma;
+            background: none;
+            font-size: 20px;
+            border: 2px solid #44197c;
+            cursor: pointer;
+            padding: 16px 0;
+            margin-bottom: 27px;
+            width: 290px;
+            transition: 0.5s;
+            &:hover {
+                background: #44197c;
+                color: white;
+            }
+        }
+    }
+}

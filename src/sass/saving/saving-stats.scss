@@ -1,0 +1,40 @@
+.saving {
+    &-stats {
+        width: 100%;
+        height: 600px;
+        background: url(../img/saving/saving-total.png) no-repeat center;
+        background-size: cover;
+        &-content {
+            position: relative;
+        }
+    }
+    &-count {
+        display: flex;
+        
+        &__item {
+            width: 47px;
+            height: 75px;
+            margin: 0 2px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #b2b2b2;
+            border-radius: 7px;
+            background: linear-gradient(to top, #dcdad6 0%, #ffffff 100%);
+            color: #cc0026;
+            font-family: "Helvetica Neue LTCYR - Bd Cond", sans-serif;
+            font-size: 62px;
+        }
+    }
+    &-total {
+        position: absolute;
+        top: 100px;
+        left: 50%;
+
+        &__title {
+                color: #3d3d3d;
+                font-family: "Helvetica Neue LTCYR - Md Cond", sans-serif;
+                font-size: 50px;
+        }
+    }
+}

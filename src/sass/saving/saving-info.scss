@@ -1,0 +1,14 @@
+.saving {
+    &-info {
+        background: #461b7d url(../img/saving/saving-info.png) no-repeat center top;
+        background-size: 100%;
+        padding: 100px;
+        &__text {
+            color: white;
+            font-family: 'Tahoma', sans-serif;
+            font-size: 18px;
+            line-height: 36px;
+            padding-bottom: 60px;
+        }
+    }
+}

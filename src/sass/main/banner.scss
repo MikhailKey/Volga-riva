@@ -1,14 +1,18 @@
 .banner {
-    height: 570px;
-    width: 100%;
-    background: url(../img/header/banner.png) no-repeat center;
-    background-size: cover;
-    padding-top: 34px;
+    &-bg {
+        height: 570px;
+        width: 100%;
+        background: url(../img/header/banner.png) no-repeat center;
+        background-size: cover;
+        padding-top: 34px;
+
+    }
     &-title {
         width: 525px;
         height: 143px;
         background: url(../img/header/banner-line.png);
         background-size: cover;
+        text-align: left;
         position: relative;
         padding: 12px 0px 13px 67px;
         &__text {
@@ -23,6 +27,7 @@
     &-subtitle {
         padding: 30px 0 32px 67px;
         width: 350px;
+        text-align: left;
         &__text {
             font-family: 'Helvetica Neue LTCYR - Md Cond', sans-serif;
             color: #3d3d3d;

@@ -1,5 +1,95 @@
 .zaimy-feedback {
     width: 100%;
-    height: 400px;
-    
+    &__title {
+        color: #005086;
+        font-family: 'Tahoma', sans-serif;
+        font-size: 24px;
+        font-weight: normal;
+        padding-top: 90px;
+        margin-bottom: 36px;
+    }  
+    &-property {
+        padding: 40px 0;
+        &__title {
+            color: #3d3d3d;
+            font-family: 'Tahoma', sans-serif;
+            font-weight: 400;
+            font-size: 30px;
+            padding-bottom: 40px;
+        }
+        &__text {
+            line-height: 30px;
+            font-family: 'Tahoma', sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+        }
+        &-facts {
+            padding: 20px 0;
+        }
+        &-fact {
+            display: flex;
+            align-items: center;
+            &__line {
+                width: 8px;
+                height: 75px;
+                background: #006eb6;
+                margin: 10px 30px 10px 20px;
+            }
+            &__text {
+                color: #3d3d3d;
+                font-family: 'Tahoma', sans-serif;
+                font-size: 15px;
+                width: 900px;
+                line-height: 32px;
+            }
+        }
+        &__button {
+            margin-top: 80px;
+            margin-bottom: 30px;
+            padding: 18px 31px;
+            text-transform: uppercase;
+            color: white;
+            font-size: 20px;
+            border: none;
+            background: #006eb6;
+            transition: 0.5s;
+            &:hover {
+                background: #ed8706;
+            }
+            &__wrap {
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+}
+.owl-carousel {
+    height: 100%;
+    position: relative;
+    text-align: center;
+}
+.owl-prev, .owl-next {
+    svg {
+        width: 30px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-150%);
+        cursor: pointer;
+        height: 30px;
+        transition: 0.5s;
+        fill: #757575;
+        &:hover {
+            fill: #368dc5;
+        }
+    }
+}
+.owl-prev {
+    svg {   
+        left: -4%;
+    }
+}
+.owl-next {
+    svg {   
+        right: -4%;
+    }
 }

@@ -1,4 +1,4 @@
-.navigation {
+.b-navigation {
     display: flex;
     width: 100%;
     font-family: 'Tahoma', sans-serif;
@@ -36,11 +36,11 @@
                 content: '';
                 width: 0%;
                 height: 4px;
-                background: #006eb6;
+                background: #259b00;
                 transition: 0.3s
             }
             &:hover {
-                color: #006eb6;
+                color: #259b00;
                 &:after {
                         width: 100%;
                     }
@@ -76,9 +76,9 @@
         padding: 11px 27px;
         transition: 0.3s;
         &:hover {
-            background-color: #006eb6;
+            background-color: #259b00;
             color: white;
-            border: 2px solid #006eb6;
+            border: 2px solid #259b00;
         }
     }
     &-bottom {
@@ -111,7 +111,7 @@
                     color: #3d3d3d;
                     transition: 0.3s;
                     &:hover {
-                        color: #006eb6;
+                        color: #259b00;
                     }
                 }
                 &:after {
@@ -122,11 +122,11 @@
                     content: '';
                     width: 0%;
                     height: 4px;
-                    background: #006eb6;
+                    background: #259b00;
                     transition: 0.3s
                 }
                 &:hover {
-                    color: #006eb6;
+                    color: #259b00;
                     &:after {
                             width: 120%;
                         }
@@ -156,7 +156,7 @@
                 padding: 15px 40px;
                 transition: 0.3s;
                 &:hover {
-                    background: #006eb6;
+                    background: #259b00;
                     color: white;
                 }
             }
@@ -164,7 +164,7 @@
     }
 }
 
-.navigation-bottom-menu {
+.b-navigation-bottom-menu {
     &__hamburger {
         cursor: pointer;
         height: 15px;
@@ -174,7 +174,7 @@
     }
     
     &__line {
-        background-color: #006eb6;
+        background-color: #259b00;
         height: 3px;
         position: absolute;
         width: 100%;
@@ -193,18 +193,5 @@
             bottom: 0px;
             left: 0px;
         }
-    }
-}
-
-.fade {
-    animation: fade 0.5s ease;
-    display: block;
-}
-@keyframes fade {
-    from {
-        opacity: .1;
-    }
-    to {
-        opacity: 1;
     }
 }

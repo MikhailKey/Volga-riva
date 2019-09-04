@@ -8,16 +8,19 @@
         display: flex;
         flex-wrap: wrap;
         box-shadow: 0 0 10px rgba(black, 0.1);
+        padding: 68px 60px 68px 120px;
     }
     &-item {
         flex-basis: 50%;
-        padding: 68px 60px 68px 120px;
         &__title {
             color: #005086;
             font-family: 'Tahoma', sans-serif;
             font-size: 24px;
             font-weight: normal;
             margin-bottom: 20px;
+            &__color {
+                color: #44197c;
+            }
         }
         &-add {
             margin-top: 30px;
@@ -119,37 +122,7 @@
                 }
             }
         }
-        &-result {
-            margin-top: 45px;
-            display: flex;
-            width: 350px;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            &-percent {
-                flex-basis: 25%;
-            }
-            &-taxes {
-                flex-basis: 25%
-            }
-            &-income {
-                flex-basis: 50%
-            }
-            &__title {
-                padding: 10px 0;
-                text-align: center;
-                font-family: "Tahoma", sans-serif;
-                color: white;
-                font-size: 14px;
-                background: #0060a0;
-            }
-            &__info {
-                margin-top: 23px;
-                color: #686868;
-                font-family: 'Tahoma', sans-serif;
-                font-size: 24px;
-                text-align: center;
-            }
-        }
+        
         &__label {
             color: #3d3d3d;
             font-family: Tahoma;
@@ -170,6 +143,40 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%)
+        }
+    }
+    &-result {
+        margin-top: 45px;
+        display: flex;
+        width: 350px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        &-percent {
+            flex-basis: 25%;
+        }
+        &-taxes {
+            flex-basis: 25%
+        }
+        &-income {
+            flex-basis: 50%
+        }
+        &__title {
+            padding: 10px 0;
+            text-align: center;
+            font-family: "Tahoma", sans-serif;
+            color: white;
+            font-size: 14px;
+            background: #0060a0;
+            &__color {
+                background: #44197c;
+            }
+        }
+        &__info {
+            margin-top: 23px;
+            color: #686868;
+            font-family: 'Tahoma', sans-serif;
+            font-size: 24px;
+            text-align: center;
         }
     }
 }

@@ -1,6 +1,5 @@
 .contacts {
     width: 100%;
-    background-color: #004b7e;
     &-wrap {
         display: flex;
         align-items: center;
@@ -15,7 +14,7 @@
     &-info {
         padding: 20px 90px;
         flex-basis: 50%;
-        background-color: #175987;
+        background: rgba(white, 0.1);
         display: flex;
         justify-content: flex-end;
         &-town {
@@ -36,7 +35,7 @@
                 height: 2px;
                 background: white;
             }
-            &__arrow {
+            svg {
                 width: 10px;
                 height: 10px;
                 fill: white;
@@ -64,4 +63,10 @@
             }
         }
     }
+}
+.contacts-green {
+    background: linear-gradient(90deg,#1e7801,#2b940a);
+}
+.contacts-blue {
+    background: linear-gradient(90deg, #005084, #004a7a);
 }

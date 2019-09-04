@@ -1,0 +1,12 @@
+.capital-workplan {
+    padding: 100px;
+    &__title {
+        text-align: center;
+        color: #3d3d3d;
+        font-family: 'Tahoma', sans-serif;
+        font-weight: bold;
+        font-size: 36px;
+        text-transform: uppercase;
+        padding-bottom: 50px;
+    }
+}
