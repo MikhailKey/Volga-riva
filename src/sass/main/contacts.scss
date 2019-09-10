@@ -64,9 +64,73 @@
         }
     }
 }
+.contacts-mobile {
+    display: none;
+}
 .contacts-green {
     background: linear-gradient(90deg,#1e7801,#2b940a);
 }
 .contacts-blue {
     background: linear-gradient(90deg, #005084, #004a7a);
+}
+@media (max-width: 1200px) {
+    .contacts {
+        &-info {
+            padding: 20px;
+        }
+    }
+}
+@media (max-width: 991px) {
+    .contacts {
+        &-info {
+            justify-content: center;
+            &-town {
+                &:after {
+                    top: 120%;
+                    width: 30%;
+                }
+            }
+            &-adress {
+                flex-basis: 100%;
+                margin: 0 auto;
+                text-align: center;
+                &-number {
+                    justify-content: center;
+                }
+            }
+        }
+        &-desktop {
+            display: none;
+        }
+        &-mobile {
+            padding-top: 10px;
+            display: flex;
+        }
+    }
+}
+@media (max-width: 550px) {
+    .contacts {
+        &-logo {
+            img {
+                width: 100%;
+            }
+        }
+        &-info {
+            background: none;
+            padding: 0;
+        }
+    }
+}
+@media (max-width: 380px) {
+    .contacts {
+        &-wrap {
+            flex-direction: column;
+        }
+        &-info {
+            padding-top: 30px;
+        }
+        &-mobile {
+            justify-content: center;
+        }
+    }
 }

@@ -7,9 +7,15 @@
     justify-content: space-around;
     align-items: center;
     &-bg {
-    height: 58px;
+    padding: 4px 0;
     background-color: #fafafa;
     border: 1px solid #c4c9cc;
+    }
+    &-middle {
+        padding: 10px;
+        display: none;        
+        justify-content: space-around;
+        align-items: center;
     }
     &-list {
         display: flex;
@@ -69,7 +75,6 @@
     &-button {
         flex-basis: 25%;
         font-size: 12px;
-        height: 40px;
         color: #8e8e8e;
         border: 2px solid #c4c9cc;
         background-color: #fbfbfb;
@@ -143,7 +148,6 @@
             width: 250px;
             background: white;
             border: 1px solid #c4c9cc;
-            transition: 1s;
             display: none;
             ul {
                 padding-top: 60px;
@@ -206,5 +210,80 @@
     }
     to {
         opacity: 1;
+    }
+}
+
+@media (max-width: 1200px) {
+    .navigation {
+        &-list {
+            flex-basis: 25%;
+        }
+    }
+}
+@media (max-width:991px) {
+    .navigation {
+        &-middle {
+            display: flex;
+        } 
+        &-bottom {
+            &-menu {
+                width: 100%;
+            }
+        }
+        &-list {
+            flex-basis: 50%;
+        }
+        &-connect {
+            flex-basis: 50%;
+        }
+    }
+    .desktop-hide {
+        display: none;
+    }
+}
+@media (max-width: 768px) {
+    .navigation {
+        &-connect-item {
+            flex-basis: 50%;
+        }
+        &-list__item {
+            flex-basis: 50%;
+        }
+        &-bottom-menu {
+            justify-content: space-between;
+            padding: 0 30px;
+            &__item {
+                margin: 0;
+            }
+        }
+        &-bottom-list {
+            left: -220px;
+        }
+    }
+}
+@media (max-width: 550px) {
+    .navigation {
+        &-list {
+            font-size: 10px;
+        }
+        &-connect {
+            font-size: 11px;
+        }
+        &-button {
+            font-size: 10px;
+        }
+        &-bottom {
+            height: 60px;
+            font-size: 11px;
+        }
+    }
+}
+@media (max-width: 550px) {
+    .navigation {
+        &-bottom {
+            &-menu {
+                padding: 0;
+            }
+        }
     }
 }

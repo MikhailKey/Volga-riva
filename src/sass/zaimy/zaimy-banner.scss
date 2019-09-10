@@ -92,14 +92,15 @@
     }
     &-service {
         width: calc(100% / 3);
+        z-index: 10;
         position: relative;
-        border: 2px solid transparent;
+        border: 1px solid transparent;
         border-top: 1px solid #cacaca;
         height: 350px;
         padding: 40px 20px;
         &:hover {
             border: 1px solid #cacaca;
-            border-top: none;
+            border-top-color: transparent;
         }
         &__icon {
             height: 60px;

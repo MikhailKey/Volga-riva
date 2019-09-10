@@ -76,6 +76,8 @@
 }
 .tariff {
     &-info {
+        z-index: 100;
+        display: none;
         position: absolute;
         top: -60%;
         left: 50%;
@@ -190,4 +192,8 @@
             }
         }
     }
+}
+.fade-tariff {
+    animation: fade 0.5s ease;
+    display: block;
 }

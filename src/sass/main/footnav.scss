@@ -55,3 +55,43 @@
         }
     }
 }
+@media (max-width: 991px) {
+    .footnav-navigation {
+        flex-basis: 60%;
+    }
+}
+@media (max-width: 650px) {
+    .footnav {
+        &-wrap {
+        flex-direction: column-reverse;
+        justify-content: center;
+        }
+        &-media {
+            padding-top: 30px;
+            &__link {
+                text-align: center;
+                margin-bottom: 10px;
+            }
+            &-icons {
+                margin: 0 auto;
+            }
+        }
+    }
+}
+@media (max-width: 450px) {
+    .footnav {
+        &-navigation-row {
+            a {
+                font-size: 11px;
+            }
+        }
+        &-media {
+            &__link {
+                font-size: 11px;
+            }
+            &-icons__item {
+                width: 30px;
+            }
+        }
+    }
+}

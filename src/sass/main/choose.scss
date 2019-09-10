@@ -84,3 +84,41 @@
         }
     }
 }
+@media (max-width: 991px) {
+    .choose {
+        &-wrap {
+            justify-content: center;
+        }
+        &-item {
+            margin: 20px;
+            flex-basis: 70%;
+        }
+    }
+}
+@media (max-width: 768px) {
+    .choose {
+        &-item {
+            flex-basis: 100%;
+        }
+    }
+}
+@media (max-width: 500px) {
+    .choose {
+        &-wrap {
+            padding: 20px;
+        }
+    }
+}
+@media (max-width: 430px) {
+    .choose {
+        &-item {
+            padding: 10px;
+            &:nth-child(1) {
+                height: 370px;
+            }
+            &:nth-child(2) {
+                height: 400px;
+            }
+        }
+    }
+}

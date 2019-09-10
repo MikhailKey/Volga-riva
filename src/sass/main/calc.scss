@@ -11,10 +11,12 @@
         padding: 68px 60px 68px 120px;
     }
     &-item {
-        flex-basis: 50%;
+        flex-basis: 40%;
         &__title {
             color: #005086;
             font-family: 'Tahoma', sans-serif;
+            width: 100%;
+            text-align: center;
             font-size: 24px;
             font-weight: normal;
             margin-bottom: 20px;
@@ -25,14 +27,14 @@
         &-add {
             margin-top: 30px;
             display: flex;
-            width: 250px;
+            width: 100%;
             align-items: center;
             justify-content: space-between;
             &-description {
                 margin-top: 10px;
                 display: flex;
                 justify-content: space-between;
-                width: 350px;
+                width: 100%;
                 color: #717171;
                 font-family: Tahoma;
                 font-size: 14px;
@@ -41,7 +43,7 @@
                 z-index: 0;
                 margin-top: 20px;
                 position: relative;
-                width: 350px;
+                width: 100%;
                 appearance: none;
                 border-radius:2px;
                 height:3px;
@@ -88,7 +90,7 @@
         &-checkbox {
             margin-top: 30px;
             display: flex;
-            width: 350px;
+            width: 100%;
             align-items: center;
             justify-content: space-between;
             &__label {
@@ -96,13 +98,14 @@
                 position: relative;
                 font-family: Tahoma;
                 font-size: 16px;
+                width: 100%;
                 line-height: 22px;
                 cursor: pointer;
                 &:after {
                     content: '';
                     position: absolute;
                     top: 7px;
-                    left: 320px;
+                    right: 0;
                     width: 30px;
                     height: 30px;
                     border: 1px solid #9a9a9a;
@@ -136,7 +139,7 @@
         }
     }
     &-image {
-        flex-basis: 50%;
+        flex-basis: 60%;
         position: relative;
         img {
             position: absolute;
@@ -148,7 +151,7 @@
     &-result {
         margin-top: 45px;
         display: flex;
-        width: 350px;
+        width: 100%;
         flex-wrap: wrap;
         justify-content: space-between;
         &-percent {
@@ -177,6 +180,62 @@
             font-family: 'Tahoma', sans-serif;
             font-size: 24px;
             text-align: center;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .calc {
+        &-wrap {
+            padding: 30px;
+            justify-content: center;
+            align-items: center;
+        }
+        &-image {
+            display: none;
+        }
+        &-item {
+            flex-basis: 100%;
+            padding: 0 50px;
+        }
+    }
+}
+@media (max-width: 768px) {
+    .calc {
+        background: white;
+        &-wrap {
+            width: 100%;
+
+        }
+    }
+}
+@media (max-width: 450px) {
+    .calc {
+        &-wrap {
+            padding: 15px;
+        }
+        &-item { 
+            padding: 0 15px;
+        }
+    }
+}
+@media (max-width: 350px) {
+    .calc {
+        &-item {
+            &__title {
+                font-size: 20px
+            }
+            &-checkbox__label {
+                font-size: 12px;
+            }
+        }
+        &-result {
+            &__title {
+                font-size: 12px;
+            }
+            &__info {
+                font-size: 16px;
+            }
         }
     }
 }
