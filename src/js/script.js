@@ -36,7 +36,7 @@ $(document).ready(function(){
     });
 
     $('.svg').each(function() {
-        var path = '../' + $(this).data('src');
+        var path = './' + $(this).data('src');
         replace($(this), path);
     });
     
