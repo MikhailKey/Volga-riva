@@ -103,7 +103,7 @@ a {
 }
 
 .b-navigation-bg {
-  height: 58px;
+  padding: 4px 0;
   background-color: #fafafa;
   border: 1px solid #c4c9cc;
 }
@@ -138,7 +138,7 @@ a {
 
 .b-navigation-list__item:after {
   position: absolute;
-  bottom: 1px;
+  top: 100%;
   left: 50%;
   transform: translateX(-50%);
   content: '';
@@ -320,6 +320,18 @@ a {
 .b-navigation-bottom-menu__line:nth-child(3) {
   bottom: 0px;
   left: 0px;
+}
+
+.b-bottom-active:after {
+  position: absolute;
+  bottom: -80%;
+  left: 50%;
+  transform: translateX(-50%);
+  content: '';
+  width: 110%;
+  height: 2px;
+  background: #259b00;
+  transition: 0.3s;
 }
 
 .navigation-bottom-menu__hamburger {
@@ -1747,7 +1759,7 @@ a {
 
 .navigation-list__item:after {
   position: absolute;
-  bottom: 1px;
+  top: 100%;
   left: 50%;
   transform: translateX(-50%);
   content: '';
@@ -1852,7 +1864,7 @@ a {
   transform: translateX(-50%);
   content: '';
   width: 0%;
-  height: 4px;
+  height: 2px;
   background: #006eb6;
   transition: 0.3s;
 }
@@ -1928,6 +1940,18 @@ a {
 .navigation-bottom-menu__line:nth-child(3) {
   bottom: 0px;
   left: 0px;
+}
+
+.nav-bottom-active:after {
+  position: absolute;
+  bottom: -80%;
+  left: 50%;
+  transform: translateX(-50%);
+  content: '';
+  width: 110%;
+  height: 2px;
+  background: #006eb6;
+  transition: 0.3s;
 }
 
 .fade {
@@ -2917,6 +2941,10 @@ a {
 }
 
 @media (max-width: 450px) {
+  .saving-banner-content {
+    width: 90%;
+  }
+
   .saving-button {
     font-size: 15px;
   }

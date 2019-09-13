@@ -183,6 +183,11 @@
 }
 @media (max-width: 450px) {
     .saving {
+        &-banner {
+            &-content {
+                width: 90%;
+            }
+        }
         &-button {
             font-size: 15px;
         }

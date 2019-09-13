@@ -36,7 +36,7 @@
             transition: 0.3s;
             &:after {
                 position: absolute;
-                bottom: 1px;
+                top: 100%;
                 left: 50%;
                 transform: translateX(-50%);
                 content: '';
@@ -126,7 +126,7 @@
                     transform: translateX(-50%);
                     content: '';
                     width: 0%;
-                    height: 4px;
+                    height: 2px;
                     background: #006eb6;
                     transition: 0.3s
                 }
@@ -199,7 +199,19 @@
         }
     }
 }
-
+.nav-bottom-active {
+    &:after {
+        position: absolute;
+        bottom: -80%;
+        left: 50%;
+        transform: translateX(-50%);
+        content: '';
+        width: 110%;
+        height: 2px;
+        background: #006eb6;
+        transition: 0.3s
+    }
+}
 .fade {
     animation: fade 0.5s ease;
     display: block;

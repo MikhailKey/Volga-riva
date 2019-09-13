@@ -7,7 +7,7 @@
     justify-content: space-around;
     align-items: center;
     &-bg {
-    height: 58px;
+    padding: 4px 0;
     background-color: #fafafa;
     border: 1px solid #c4c9cc;
     }
@@ -36,7 +36,7 @@
             transition: 0.3s;
             &:after {
                 position: absolute;
-                bottom: 1px;
+                top: 100%;
                 left: 50%;
                 transform: translateX(-50%);
                 content: '';
@@ -201,6 +201,19 @@
     }
 }
 
+.b-bottom-active {
+    &:after {
+        position: absolute;
+        bottom: -80%;
+        left: 50%;
+        transform: translateX(-50%);
+        content: '';
+        width: 110%;
+        height: 2px;
+        background: #259b00;
+        transition: 0.3s
+    }
+}
 
 
 .navigation-bottom-menu {
