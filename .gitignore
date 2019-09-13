@@ -1,4 +1,5 @@
-/build
+/src
 /node_modules
 /файлы
-
+src/
+/src/
