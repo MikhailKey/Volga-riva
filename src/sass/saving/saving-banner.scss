@@ -79,7 +79,7 @@
             text-transform: uppercase;
             position: relative;
             color: #3d3d3d;
-            font-family: Tahoma;
+            font-family: "Tahoma", sans-serif;
             font-size: 14px;
             font-weight: 700;   
             cursor: pointer;
@@ -106,7 +106,7 @@
         }
         &__program {
             color: #44197c;
-            font-family: Tahoma;
+            font-family: "Tahoma", sans-serif;
             background: none;
             font-size: 20px;
             border: 2px solid #44197c;

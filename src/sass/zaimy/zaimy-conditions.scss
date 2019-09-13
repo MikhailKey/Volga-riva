@@ -15,7 +15,7 @@
     &__title {
         text-align: center;
         color: #fefefe;
-        font-family: Tahoma;
+        font-family: "Tahoma", sans-serif;
         font-size: 36px;
         font-weight: 700;
         text-transform: uppercase;
@@ -51,7 +51,7 @@
             &__text {
                 color: #ffffff;
                 width: 240px;
-                font-family: Tahoma;
+                font-family: "Tahoma", sans-serif;
                 font-size: 14px;
                 font-weight: 400;
                 line-height: 21.99px;
@@ -89,7 +89,7 @@
         color: white;
         text-transform: uppercase;
         padding: 18px 34px;
-        font-family: Tahoma;
+        font-family: "Tahoma", sans-serif;
         cursor: pointer;
         font-size: 20px;
         width: 265px;

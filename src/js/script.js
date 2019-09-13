@@ -3,6 +3,7 @@ $(document).ready(function(){
         loop: true,
         items: 3,
         video: true,
+        mouseDrag: false,
         autoplay : 3000,
         autoplaySpeed: 1500,
         autoplayHoverPause: true,
