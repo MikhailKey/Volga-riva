@@ -14,19 +14,27 @@
         transform: translateX(-30%);
     }
     &-content {
-        width: 586px;
+        width: 650px;
+        height: 100%;
         position: relative;
     }
     &-title {
-        background: url(../../img/b-zaimy/b-zaimy-title.png) no-repeat center;
-        background-size: cover;
-        width: 650px;
-        height: 190px;
+        position: relative;
+        width: 100%;
         color: #ffffff;
         text-align: center;
         font-family: "Helvetica Neue LTCYR - Md Cond", sans-serif;
         line-height: 50px;
-        padding-top: 30px;
+        &-text {
+            position: absolute;
+            width: 100%;
+            top: 20%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        img {
+            width: 100%;
+        }
         h1 {
             font-size: 60px; 
             letter-spacing: 1.5px;
@@ -39,7 +47,7 @@
     }
     &-advantages {
         margin-top: 150px;
-        width: 650px;
+        width: 100%;
         height: 130px;
         background: rgba(white, 0.9);
         display: flex;
@@ -80,5 +88,143 @@
         font-size: 20px;
         border: none;
         background: #259b00;
+    }
+}
+@media (max-width: 991px) {
+    .b-zaimy {
+        &-content {
+            width: 500px;
+        }
+        &-title {
+            &-text {
+            top: 10%;
+            }
+            h1 {
+                font-size: 45px;
+            }
+            h3 {
+                font-size: 30px;
+            }
+        }
+        &-item {
+            &__text {
+                font-size: 25px;
+                &__yellow {
+                    font-size: 40px;
+                }
+                &__small {
+                    font-size: 16px;
+                }
+            }
+            &:nth-child(3) {
+                padding-left: 20px;
+            }
+        }
+    }
+}
+@media (max-width: 700px) {
+    .b-zaimy {
+        &-content {
+            width: 70%;
+        }
+        &-human {
+            width: 170%;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-30%);
+        }
+        &-title {
+            &-text {
+            top: 20%;
+            }
+            h1 {
+                font-size: 40px;
+                line-height: 30px;
+            }
+            h3 {
+                font-size: 25px;
+                line-height: 30px;
+            }
+        }
+        &-advantages {
+            height: 100px;
+            width: 130%;
+        }
+    }
+}
+@media (max-width: 600px) {
+    .b-zaimy {
+        &-content {
+            width: 80%;
+        }
+        &-advantages {
+            margin-top: 80px;
+            width: 100%;
+        }
+        &-item {
+            &__text {
+                font-size: 20px;
+                &__yellow {
+                    font-size: 30px;
+                }
+            }
+            &:nth-child(3) {
+                padding-left: 10px;
+            }
+            &:nth-child(1) {
+                padding-left: 10px;
+            }
+
+        }
+    }
+}
+@media (max-width: 500px) {
+    .b-zaimy {
+        &-bg {
+            padding: 20px 0;
+        }
+        &-advantages {
+            width: 120%;
+            height: 70px;
+        }
+        &-button {
+            margin-top: 10px;
+        }
+    }
+}
+@media (max-width: 400px) {
+    .b-zaimy {
+        &-title {
+            &-text {
+                top: 10%;
+            }
+            h1 {
+                font-size: 25px;
+                line-height: 25px;
+            }
+            h3 {
+                font-size: 17px;
+                line-height: 25px;
+            }
+        }
+        &-item {
+            &__text {
+                font-size: 14px;
+                &__yellow {
+                    font-size: 17px;
+                }
+                &__small {
+                    font-size: 13px;
+                }
+            }
+        }
+        &-advantages {
+            margin-top: 40px;
+            height: 60px;
+        }
+        &-button {
+            font-size: 16px;
+        }
     }
 }

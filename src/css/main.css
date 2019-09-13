@@ -461,20 +461,30 @@ a {
 }
 
 .b-zaimy-content {
-  width: 586px;
+  width: 650px;
+  height: 100%;
   position: relative;
 }
 
 .b-zaimy-title {
-  background: url("../img/b-zaimy/b-zaimy-title.png") no-repeat center;
-  background-size: cover;
-  width: 650px;
-  height: 190px;
+  position: relative;
+  width: 100%;
   color: #ffffff;
   text-align: center;
   font-family: "Helvetica Neue LTCYR - Md Cond", sans-serif;
   line-height: 50px;
-  padding-top: 30px;
+}
+
+.b-zaimy-title-text {
+  position: absolute;
+  width: 100%;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.b-zaimy-title img {
+  width: 100%;
 }
 
 .b-zaimy-title h1 {
@@ -490,7 +500,7 @@ a {
 
 .b-zaimy-advantages {
   margin-top: 150px;
-  width: 650px;
+  width: 100%;
   height: 130px;
   background: rgba(255, 255, 255, 0.9);
   display: flex;
@@ -538,6 +548,152 @@ a {
   font-size: 20px;
   border: none;
   background: #259b00;
+}
+
+@media (max-width: 991px) {
+  .b-zaimy-content {
+    width: 500px;
+  }
+
+  .b-zaimy-title-text {
+    top: 10%;
+  }
+
+  .b-zaimy-title h1 {
+    font-size: 45px;
+  }
+
+  .b-zaimy-title h3 {
+    font-size: 30px;
+  }
+
+  .b-zaimy-item__text {
+    font-size: 25px;
+  }
+
+  .b-zaimy-item__text__yellow {
+    font-size: 40px;
+  }
+
+  .b-zaimy-item__text__small {
+    font-size: 16px;
+  }
+
+  .b-zaimy-item:nth-child(3) {
+    padding-left: 20px;
+  }
+}
+
+@media (max-width: 700px) {
+  .b-zaimy-content {
+    width: 70%;
+  }
+
+  .b-zaimy-human {
+    width: 170%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-30%);
+  }
+
+  .b-zaimy-title-text {
+    top: 20%;
+  }
+
+  .b-zaimy-title h1 {
+    font-size: 40px;
+    line-height: 30px;
+  }
+
+  .b-zaimy-title h3 {
+    font-size: 25px;
+    line-height: 30px;
+  }
+
+  .b-zaimy-advantages {
+    height: 100px;
+    width: 130%;
+  }
+}
+
+@media (max-width: 600px) {
+  .b-zaimy-content {
+    width: 80%;
+  }
+
+  .b-zaimy-advantages {
+    margin-top: 80px;
+    width: 100%;
+  }
+
+  .b-zaimy-item__text {
+    font-size: 20px;
+  }
+
+  .b-zaimy-item__text__yellow {
+    font-size: 30px;
+  }
+
+  .b-zaimy-item:nth-child(3) {
+    padding-left: 10px;
+  }
+
+  .b-zaimy-item:nth-child(1) {
+    padding-left: 10px;
+  }
+}
+
+@media (max-width: 500px) {
+  .b-zaimy-bg {
+    padding: 20px 0;
+  }
+
+  .b-zaimy-advantages {
+    width: 120%;
+    height: 70px;
+  }
+
+  .b-zaimy-button {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 400px) {
+  .b-zaimy-title-text {
+    top: 10%;
+  }
+
+  .b-zaimy-title h1 {
+    font-size: 25px;
+    line-height: 25px;
+  }
+
+  .b-zaimy-title h3 {
+    font-size: 17px;
+    line-height: 25px;
+  }
+
+  .b-zaimy-item__text {
+    font-size: 14px;
+  }
+
+  .b-zaimy-item__text__yellow {
+    font-size: 17px;
+  }
+
+  .b-zaimy-item__text__small {
+    font-size: 13px;
+  }
+
+  .b-zaimy-advantages {
+    margin-top: 40px;
+    height: 60px;
+  }
+
+  .b-zaimy-button {
+    font-size: 16px;
+  }
 }
 .certificates {
   background-color: #eeeeee;
