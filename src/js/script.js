@@ -105,7 +105,8 @@ $(document).ready(function(){
         function activeLink(...args) 
         {
             let url = document.location.href,
-                links = $(args[0]); 
+                links = $(args[0]),
+                mainLinks = $(args[1]);
             links.each(function(i, link) 
             {
                 if (url === link.href)
@@ -113,12 +114,19 @@ $(document).ready(function(){
                     $(link).addClass('nav-bottom-active');
                 }
             })
+            mainLinks.each(function(i, mainLink)
+            {
+                if ($(mainLink).html() === 'Частным клиентам')
+                {
+                    $(mainLink).addClass('nav-top-active');
+                }
+            })
         }
         showModal('.navigation-bottom-menu__hamburger', '.navigation-bottom-list');
         hideModal('.navigation-bottom-list');
         showTariff('.saving-tariff-button button', '.tariff-info', '.tariff-close');
         hideTariff('.tariff-info');
-        activeLink('.navigation-bottom-menu__item a');
+        activeLink('.navigation-bottom-menu__item a', '.navigation-list__item   ');
 
     }
     else 
@@ -144,22 +152,12 @@ $(document).ready(function(){
                 }
             });
         }
-        
-        // function activeBusinessLink(...args) {
-        //     let url = document.location.href,
-        //         links = document.querySelectorAll(args[0]);
-        //     links.forEach(function(link) 
-        //     {
-        //         if (url === link.href)
-        //         {
-        //             link.classList.add('b-bottom-active');
-        //         }
-        //     })
-        // }
+
         function activeBusinessLink(...args) 
         {
             let url = document.location.href,
-                links = $(args[0]); 
+                links = $(args[0]),
+                mainLinks = $(args[1]);
             links.each(function(i, link) 
             {
                 if (url === link.href)
@@ -167,9 +165,17 @@ $(document).ready(function(){
                     $(link).addClass('b-bottom-active');
                 }
             })
+            mainLinks.each(function(i, mainLink)
+            {
+                if ($(mainLink).html() === 'Бизнесу')
+                {
+                    $(mainLink).addClass('b-top-active');
+                }
+            })
         }
-        activeBusinessLink('.b-navigation-bottom-menu__item a');
         showBusinessModal('.b-navigation-bottom-menu__hamburger', '.b-navigation-bottom-list');
         hideBusinessModal('.b-navigation-bottom-list');
+        activeBusinessLink('.b-navigation-bottom-menu__item a', '.b-navigation-list__item');
+
     }
 });
