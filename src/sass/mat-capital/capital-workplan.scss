@@ -1,5 +1,5 @@
 .capital-workplan {
-    padding: 100px;
+    padding: 100px 0;
     &__title {
         text-align: center;
         color: #3d3d3d;
@@ -8,5 +8,17 @@
         font-size: 36px;
         text-transform: uppercase;
         padding-bottom: 50px;
+    }
+}
+@media (max-width: 768px) {
+    .capital-workplan {
+        padding: 50px 0;
+    }
+}
+@media (max-width: 500px) {
+    .capital-workplan {
+        &__title {
+            font-size: 25px;
+        }
     }
 }

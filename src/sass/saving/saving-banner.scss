@@ -24,23 +24,24 @@
         &-content {
             margin: auto;
             background: white;
-            width: 911px;
+            width: 80%;
             position: relative;
-            padding: 250px 100px 40px 100px;
+            padding: 230px 100px 40px 100px;
 
         }
         &__title {
             position: absolute;
-            top: 17%;
+            top: 10%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 704px;
+            width: 80%;
             height: 115px;
             background: url(../img/saving/saving-title.png) no-repeat center;
             h1 {
                 color: #ffffff;
                 font-family: "Helvetica Neue LTCYR - Md Cond", sans-serif;
                 font-size: 46px;
+                letter-spacing: 2px;
                 text-transform: uppercase;
                 font-weight: normal;
                 width: 100%;
@@ -65,7 +66,7 @@
     &-options {
         margin-top: 7px;
         flex-basis: 50%;
-        padding-left: 50px;
+        padding-left: 120px;
         &__text {
             color: #3d3d3d;
             text-transform: uppercase;
@@ -80,6 +81,7 @@
             color: #3d3d3d;
             font-family: Tahoma;
             font-size: 14px;
+            font-weight: 700;   
             cursor: pointer;
             background: none;
             border: none;
@@ -116,6 +118,78 @@
             &:hover {
                 background: #44197c;
                 color: white;
+            }
+        }
+    }
+}
+@media (max-width: 1200px) {
+    .saving {
+       &-banner {
+           &__title {
+               width: 100%;
+               background-size: cover;
+               height: 130px;
+               top: 5.5%;
+           }
+           &-content {
+               padding-top: 130px;
+           }
+           &-info {
+               flex-direction: column-reverse;
+           }
+       } 
+       &-options {
+           padding: 0;
+       }
+    }
+}
+@media (max-width: 991px) {
+    .saving {
+        &-banner {
+            &__title {
+                h1 {
+                    font-size: 35px;
+                }
+            }
+            &-content {
+                padding: 130px 0 40px 0;
+            }
+        }
+        &-options {
+            padding: 0 50px;
+        }
+    }
+}
+@media (max-width: 600px) {
+    .saving {
+        &-banner {
+            &__title {
+                top: 4.5%;
+                height: 100px;
+                h1 {
+                    font-size: 25px;
+                }
+            }
+            &-content {
+                padding: 120px 0 40px 0;
+            }
+        }
+        &-options {
+            &__program {
+                width: 100%;
+            }
+        }
+    }
+}
+@media (max-width: 450px) {
+    .saving {
+        &-button {
+            font-size: 15px;
+        }
+        &-options {
+            padding: 0 15px;
+            &__program {
+                font-size: 12px;
             }
         }
     }

@@ -11,6 +11,12 @@
     background-color: #fafafa;
     border: 1px solid #c4c9cc;
     }
+    &-middle {
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
+        display: none;
+    }
     &-list {
         display: flex;
         flex-basis: 35%;
@@ -73,7 +79,7 @@
         color: #8e8e8e;
         border: 2px solid #c4c9cc;
         background-color: #fbfbfb;
-        padding: 11px 27px;
+        padding: 5px 27px;
         transition: 0.3s;
         &:hover {
             background-color: #259b00;
@@ -191,6 +197,129 @@
         &:nth-child(3) {
             bottom: 0px;
             left: 0px;
+        }
+    }
+}
+
+
+
+.navigation-bottom-menu {
+    &__hamburger {
+        cursor: pointer;
+        height: 15px;
+        margin-left: 30px;
+        position: relative;
+        width: 20px;
+    }
+    
+    &__line {
+        background-color: #006eb6;
+        height: 3px;
+        position: absolute;
+        width: 100%;
+        transition: 0.5s;
+        &:nth-child(1) {
+            left: 0px;
+            top: 0px;
+        }
+        &:nth-child(2) {
+            left: 0px;
+            opacity: 1;
+            top: 50%;
+            transform: translateY(-50%)
+        }
+        &:nth-child(3) {
+            bottom: 0px;
+            left: 0px;
+        }
+    }
+}
+
+.fade {
+    animation: fade 0.5s ease;
+    display: block;
+}
+@keyframes fade {
+    from {
+        opacity: .1;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 1200px) {
+    .b-navigation {
+        &-list {
+            flex-basis: 25%;
+        }
+    }
+}
+@media (max-width:991px) {
+    .b-navigation {
+        &-middle {
+            display: flex;
+        } 
+        &-bottom {
+            &-menu {
+                width: 100%;
+            }
+        }
+        &-list {
+            flex-basis: 50%;
+        }
+        &-connect {
+            flex-basis: 50%;
+        }
+    }
+    .desktop-hide {
+        display: none;
+    }
+}
+@media (max-width: 768px) {
+    .b-navigation {
+        &-connect-item {
+            flex-basis: 50%;
+        }
+        &-list__item {
+            flex-basis: 50%;
+        }
+        &-bottom-menu {
+            justify-content: space-between;
+            padding: 0 30px;
+            &__item {
+                margin: 0;
+            }
+        }
+        &-bottom-list {
+            left: -220px;
+        }
+    }
+}
+@media (max-width: 550px) {
+    .b-navigation {
+        &-list {
+            font-size: 10px;
+        }
+        &-connect {
+            font-size: 11px;
+        }
+        &-button {
+            font-size: 10px;
+            padding: 5px 10px;
+        }
+        &-bottom {
+            height: 60px;
+            font-size: 11px;
+        }
+    }
+}
+@media (max-width: 550px) {
+    .b-navigation {
+        &-bottom {
+            &-menu {
+                padding: 0;
+            }
         }
     }
 }

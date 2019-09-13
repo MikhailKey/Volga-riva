@@ -147,3 +147,106 @@
         
     }
 }
+@media (max-width: 1200px) {
+    .zaimy {
+        &-banner {
+            &-wrap {
+                width: 90%;
+            }
+        }
+    }
+}
+@media (max-width: 991px) {
+    .zaimy {
+        &-banner {
+            &-wrap {
+                padding: 10px;
+            }
+            &-title {
+                width: 100%;
+                top: 0;
+                height: 130px;
+            }
+            &-content {
+                padding: 130px 30px 30px 30px;
+            }
+            &-service {
+                padding: 15px;
+                &__text {
+                    font-size: 12px;
+                    &__yellow {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 768px) {
+    .zaimy {
+        &-banner {
+            &-wrap {
+                width: 100%;
+            }
+            &-options {
+                padding-left: 0;
+                &__button{
+                    font-size: 17px;
+                    width: 100%;
+                    text-align: left;
+                }
+            }
+            &-count {
+                flex-direction: column-reverse;
+            }
+        }
+    }
+}
+@media (max-width: 600px) {
+    .zaimy {
+        &-banner{
+            &-service {
+                height: 400px;
+            }
+        }
+    }
+}
+@media (max-width: 500px) {
+    .zaimy {
+        &-banner{
+            &-service {
+                height: 350px;
+                padding: 2px;
+                padding-top: 10px;
+                &__icon {
+                    height: 40px;
+                }
+                &__title {
+                    font-size: 16px;
+                }
+                &__text {
+                    font-size: 11px;
+                    &__yellow {
+                        font-size: 14px;
+                    }
+                }
+                &__button {
+                    font-size: 12px;
+                    padding: 7px 2px;
+
+                }
+            }
+        }
+    }
+}
+@media (max-width: 400px) {
+    .zaimy {
+        &-banner{
+            &-service {
+                &__title {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}

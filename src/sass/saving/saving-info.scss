@@ -1,14 +1,45 @@
 .saving {
     &-info {
         background: #461b7d url(../img/saving/saving-info.png) no-repeat center top;
+        width: 100%;
         background-size: 100%;
-        padding: 100px;
+        padding: 100px 0 ;
         &__text {
+            width: 100%;
             color: white;
             font-family: 'Tahoma', sans-serif;
             font-size: 18px;
             line-height: 36px;
             padding-bottom: 60px;
+        }
+    }
+    &-video {
+        width: 100%;
+        height: 400px;
+        &__content {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .saving {
+        &-info {
+            padding: 50px 0;
+            &__text {
+                font-size: 15px;
+            }
+        }
+        &-video {
+            height: 300px;
+        }
+    }
+}
+@media (max-width: 425px) {
+    .saving {
+a        &-video {
+            height: 300px;
         }
     }
 }

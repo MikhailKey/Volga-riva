@@ -26,6 +26,7 @@
             width: 598px;
             height: 115px;
             background: url(../img/capital/mat-capital-line.png) no-repeat center;
+            background-size: cover;
             position: absolute;
             top: 5%;
             left: 50%;
@@ -94,5 +95,137 @@
         &-bg {
             background-size: 50%;
         }
+    }
+}
+@media (max-width: 1024px) {
+    .capital {
+        &-bg {
+            background-size: 120%;
+        }
+    }
+}
+@media (max-width: 991px) {
+    .capital {
+        &-bg {
+            background-size: 120%;
+        }
+        &-banner {
+            &-content {
+                width: 500px;
+            }
+            &-title {
+                width: 120%;
+                top: 0;
+                background-size: cover;
+                height: 150px;
+            }
+            &-offer {
+                width: 100%;
+            }
+        }
+    }
+}
+@media (max-width: 768px) {
+    .capital {
+        &-bg {
+            background-size: 130%;
+        }
+        &-banner {
+            &-content {
+                width: 80%;
+            }
+            &-title {
+                width: 110%;
+            }
+        }
+    }
+}
+@media (max-width: 600px) {
+    .capital {
+        &-bg {
+            background: url(../img/capital/capital-mobile.png) no-repeat center bottom -50px;
+            background-size: 150%;
+        }
+        &-banner {
+            &-content {
+                width: 80%;
+                height: 250px;
+            }
+            &-title {
+                width: 110%;
+                height: 100px;
+                &__text {
+                    font-size: 40px;
+                }
+            }
+            &__summ {
+                padding-top: 140px;
+                font-size: 60px;
+            }
+            &-offer {
+                &__text {
+                    font-size: 25px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 460px) {
+    .capital {
+        &-bg {
+            background: url(../img/capital/capital-mobile.png) no-repeat center bottom -50px;
+            background-size: 150%;
+            height: 450px;
+        }
+        &-banner {
+            height: 450px;
+            &-content {
+                width: 80%;
+                height: 230px;
+            }
+            &-title {
+                width: 110%;
+                height: 100px;
+                &__text {
+                    font-size: 30px;
+                }
+            }
+            &__summ {
+                padding-top: 140px;
+                font-size: 45px;
+            }
+            &-offer {
+                height: 120px;
+                &__text {
+                    font-size: 16px;
+                }
+                &__button {
+                    padding: 10px 20px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 400px) {
+    .capital {
+        &-bg {
+            background: url(../img/capital/capital-mobile.png) no-repeat center bottom -50px;
+            background-size: 150%;
+            height: 350px;
+        }
+        
+        &-banner {
+            height: 350px; 
+            &-offer {
+                height: 100px;
+            }      
+            &-title {
+                &__text {
+                    padding-top: 15px;
+                    font-size: 25px;
+                }
+            }     
+        }
+        
     }
 }

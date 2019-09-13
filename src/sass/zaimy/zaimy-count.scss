@@ -58,6 +58,78 @@
             font-family: "Helvetica Neue LTCYR - Md Cond", sans-serif;
             font-size: 22px;
         }
+    }   
+}
+@media (max-width: 768px) {
+    .zaimy {
+        &-count {
+            &-slider {
+            background-position-x: -100px;
+            background-size: 120%;
+            height: 400px;
+            }
+            &-content {
+                &__text {
+                    left: 135%;
+                    top: 70px;
+                    font-size: 20px;
+                    width: 130px;
+                }
+                &-numbers {
+                    width: 200px;
+                    &__item {
+                        height: 70px;
+                        font-size: 60px;
+                    }
+                }
+            }
+        }
     }
-    
+}
+@media (max-width: 500px) {
+    .zaimy {
+        &-count {
+            &-slider {
+            background-position-x: -100px;
+            background-position-y: bottom;
+            background-size: 120%;
+            height: 300px;
+            }
+            &-content {
+                &__text {
+                    left: 145%;
+                    font-size: 18px;
+                    width: 130px;
+                }
+                &-numbers {
+                    margin: 0;
+                    margin-left: 50px;
+                    width: 150px;
+                    &__item {
+                        margin: 2px;
+                        height: 60px;
+                        font-size: 50px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 350px) {
+    .zaimy {
+        &-count {
+            &-slider {
+            background-position-x: -60px;
+            }
+            &-content {
+                &__text {
+                    left: 145%;
+                }
+                &-numbers {
+                    margin: 0;
+                    margin-left: 20px;
+                }
+            }
+        }
+    }
 }

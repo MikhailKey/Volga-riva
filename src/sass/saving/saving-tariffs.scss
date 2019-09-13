@@ -1,6 +1,6 @@
 .saving {
     &-tariffs {
-        padding: 115px;
+        padding: 115px 0;
         &-wrap {
             position: relative;
             display: flex;
@@ -27,6 +27,10 @@
                 color: #3d3d3d;
                 font-family: 'Tahoma', sans-serif;
                 font-size: 24px;
+            }
+            img {
+                width: 27px;
+                height: 27px;
             }
         }
         &__logo {
@@ -64,7 +68,7 @@
                 font-size: 17px; 
                 padding: 18px 0;
                 border: 1px solid #44197c;
-                width: 240px;
+                width: 90%;
                 transition: 0.5s;
                 &:hover {
                     color: white;
@@ -76,13 +80,13 @@
 }
 .tariff {
     &-info {
-        z-index: 100;
+        z-index: 1000;
         display: none;
         position: absolute;
         top: -60%;
         left: 50%;
         transform: translateX(-50%);
-        width: 810px;
+        width: 70%;
         background-color: white;
         border: 1px solid #bebebe;
         box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.07);
@@ -196,4 +200,176 @@
 .fade-tariff {
     animation: fade 0.5s ease;
     display: block;
+}
+@media (max-width: 1200px) {
+    .saving {
+        &-tariff {
+            h1 {
+                font-size: 20px;
+            }
+            &-option {
+                p {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 991px) {
+    .saving {
+        &-tariffs {
+            &-wrap {
+                padding: 0;
+            }
+        }
+        &-tariff {
+            padding: 25px;
+        }
+    }
+    .tariff {
+        &-info {
+            width: 80%;
+            top: -70%;
+            &-content {
+            padding: 20px 40px 40px;
+            }
+        }
+        &-table {
+            width: 100%;
+        }
+    }
+}
+@media (max-width: 768px) {
+    .saving {
+        &-tariffs {
+            padding: 50px 0;
+        }
+        &-tariff {
+            h1 {
+                font-size: 18px;
+            }
+            h3 {
+                font-size: 25px;
+                padding: 15px 0;
+                span {
+                    font-size: 30px;
+                }
+            }
+            &-option {
+                align-items: center;
+                p {
+                    font-size: 16px;
+                }
+                img {
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+        }
+    }
+    .tariff {
+        &-info {
+            width: 90%;
+            top: -55%;
+            &-content {
+                padding: 20px;
+            }
+        }
+        &-title {
+            h1 {
+                font-size: 25px;
+            }
+            img {
+                width: 125px;
+            }
+        }
+        &-table {
+            th {
+                font-size: 12px;
+            }
+            td {
+                font-size: 12px;
+            }
+        }
+        &__description {
+            padding: 15px 0;
+        }
+        &-list {
+            padding: 25px 0 0 30px;
+            li {
+                padding: 5px 0;
+            }
+        }
+    }
+}
+@media (max-width: 600px) {
+    .tariff {
+        &__description {
+            font-size: 11px;
+            line-height: 20px;
+        }
+        &-title {
+            h1 {
+                font-size: 17px;
+            }
+            img {
+                width: 105px;
+            }
+        }
+        &-table {
+            &__summ {
+                &:before {
+                    display: none;
+                }
+            }
+            td {
+                padding: 5px 2px;
+            }
+            th {
+                padding: 5px 2px;
+            }
+        }
+        &-list {
+            li {
+                padding: 0;
+                font-size: 11px;
+                &:before {
+                    top: 12px;
+                    left: -30px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 500px) {
+    .saving {
+        &-tariff {
+            padding: 15px 5px;
+            &-button {
+                button {
+                    margin-top: 20px;
+                }
+            }
+            &-option {
+                align-items: center;
+                p {
+                    font-size: 12px;
+                }
+                img {
+                    width: 25px;
+                    height: 25px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 450px) {
+    .saving {
+        &-tariff {
+            h1 {
+                width: 130px;
+                margin: 0 auto;
+            }
+        }
+    }
 }

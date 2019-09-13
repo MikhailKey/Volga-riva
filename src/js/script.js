@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $("#zaimy-carousel").owlCarousel({
+    $(".zaimy-carousel").owlCarousel({
         loop: true,
         items: 3,
         video: true,
@@ -10,16 +10,29 @@ $(document).ready(function(){
         navText: ['<div class="svg" data-src="img/zaimy/arrow-left.svg"></div>', '<div class="svg" data-src="img/zaimy/arrow-right.svg"></div>'],
         nav: true,
         margin:10,
+        responsive:{
+            0: {
+                items: 1,
+                nav: false,
+            },
+            600:{
+                items:2,
+                nav: true,
+            },
+            1024:{
+                items:3,
+            }
+        }
     });
 
     $("#saving-slider").owlCarousel({
         loop: true,
         items: 1,
         animateOut: 'fadeOut',
+        mouseDrag: false,
         autoHeight : true,
-        autoplay : 3000,
-        autoplaySpeed: 1500,
-        autoplayHoverPause: true,
+        autoplay : 1000,
+        autoplaySpeed: 500,
     });
 
     $('.svg').each(function() {

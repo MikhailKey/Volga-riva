@@ -23,6 +23,10 @@
             background :#259b00;
         }
     }
+    &-video {
+        width: 100%;
+        height: 240px;
+    }
     &-title {
         padding-top: 40px;
     }
@@ -72,10 +76,12 @@
         
     }
 }
+.zaimy-carousel {
+    padding: 0 4%;
+}
 .owl-carousel {
     height: 100%;
     position: relative;
-    text-align: center;
 }
 .owl-prev, .owl-next {
     svg {
@@ -94,11 +100,51 @@
 }
 .owl-prev {
     svg {   
-        left: -4%;
+        left: 0;
     }
 }
 .owl-next {
     svg {   
-        right: -4%;
+        right: 0;
+    }
+}
+@media (max-width: 700px) {
+    .owl-prev {
+        svg {   
+            left: -2%;
+        }
+    }
+    .owl-next {
+        svg {   
+            right: -2%;
+        }
+    }
+}
+@media (max-width: 500px) {
+    .feedback {
+        &__title {
+            padding-top: 50px;
+        }
+        &__button {
+        margin-top: 40px;
+        margin-bottom: 15px;
+        }
+        &-property {
+            &__text {
+                font-size: 12px;
+                line-height: 20px;
+            }
+            &-fact {
+                &__text {
+                    font-size: 12px;
+                    line-height: 20px;
+                }
+                &__line {
+                    height: 100px;
+                    width: 20px;
+                    margin: 5px 15px 5px 10px;
+                }
+            }
+        }
     }
 }
