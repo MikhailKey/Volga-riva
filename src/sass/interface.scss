@@ -6,6 +6,16 @@
 a {
     text-decoration: none;
 }
+body {
+    background: white;
+    font-family: 'Tahoma', sans-serif;
+}
+button {
+    outline: none;
+}
+input {
+    outline: none;
+}
 .container {
     width: 1170px;
     margin: auto;
@@ -19,7 +29,7 @@ a {
     display: flex;
     justify-content: center;
 }
-@media (max-width: 1199px) {
+@media (max-width: 1400px) {
     .container {
         max-width: 960px;
     }

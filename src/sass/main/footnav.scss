@@ -43,13 +43,18 @@
             display: flex;
             justify-content: space-between;
             margin-bottom: 10px;
-            &__link {
-                color: #515151;
-                font-family: "Tahoma", sans-serif;
-                font-size: 14px;
-                transition: 0.3s;
+            li {
+                list-style: none;
+                a { 
+                    transition: 0.3s;
+                    color: #515151;
+                    font-family: "Tahoma", sans-serif;
+                    font-size: 14px;
+                }
                 &:hover {
-                    color: #175987;
+                    a {
+                        color: #175987;
+                    }
                 }
             }
         }
@@ -81,7 +86,7 @@
 @media (max-width: 450px) {
     .footnav {
         &-navigation-row {
-            a {
+            li a {
                 font-size: 11px;
                 padding-bottom: 5px;
                 border-bottom: 1px solid rgb(187, 186, 184);

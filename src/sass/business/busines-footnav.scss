@@ -17,13 +17,21 @@
     }
     &-navigation {
         &-row {
-            &__link {
-                color: #515151;
-                font-family: "Tahoma", sans-serif;
-                font-size: 14px;
-                transition: 0.3s;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            li {
+                list-style: none;
+                a { 
+                    transition: 0.3s;
+                    color: #515151;
+                    font-family: "Tahoma", sans-serif;
+                    font-size: 14px;
+                }
                 &:hover {
-                    color: #259b00;
+                    a {
+                        color: #259b00;
+                    }
                 }
             }
         }

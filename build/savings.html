@@ -17,10 +17,10 @@
 		<div class="navigation-bg">
 			<div class="container">
 				<div class="navigation">
-					<nav class="navigation-list">
-						<a href="index.html" class="navigation-list__item">Частным клиентам</a>
-						<a href="business-zaimy.html" class="navigation-list__item">Бизнесу</a>
-					</nav>
+					<ul class="navigation-list">
+						<li><a href="index.html" >Частным клиентам</a></li>
+						<li><a href="business-zaimy.html">Бизнесу</a></li>
+					</ul>
 					<div class="navigation-connect">
 						<div class="navigation-connect-item">
 						<p>Саратов</p>
@@ -45,27 +45,27 @@
 			<div class="navigation-bottom">
 				<a href="index.html"><img src="img/header/logo.png" alt="" class="navigation-bottom__logo desktop-hide"></a>
 				<ul class="navigation-bottom-menu">
-					<li class="navigation-bottom-menu__item"><a href="zaimy.html">Займы</a></li>
-					<li class="navigation-bottom-menu__item"><a href="capital.html">Материнский капитал</a></li>
-					<li class="navigation-bottom-menu__item"><a href="savings.html">Сбережения</a></li>
-					<div class="navigation-bottom-menu__hamburger">
-						<div class="navigation-bottom-list">
-							<ul>
-								<li>Заемщикам</li></a>
-								<a href="#"><li>Материнский капитал</li></a>
-								<a href="#"><li>Сберегателям</li></a>
-								<a href="#"><li>О нас</li></a>
-								<a href="#"><li>Руководство компании</li></a>
-								<a href="#"><li>СМИ о нас</li></a>
-								<a href="#"><li>Контакты</li></a>
-								<a href="#"><li>Новости</li></a>
-							</ul>
-						</div>
-						<span class="navigation-bottom-menu__line"></span>
-						<span class="navigation-bottom-menu__line"></span>
-						<span class="navigation-bottom-menu__line"></span>
-					</div>
+					<li><a href="zaimy.html">Займы</a></li>
+					<li><a href="capital.html">Материнский капитал</a></li>
+					<li><a href="savings.html">Сбережения</a></li>
 				</ul>
+				<div class="navigation-bottom-menu__hamburger">
+					<div class="navigation-bottom-list">
+						<ul>
+							<li><a href="#">Заёмщикам</a></li>
+							<li><a href="#">Материнский капитал</a></li>
+							<li><a href="#">Сберегателям</a></li>
+							<li><a href="#">О нас</a></li>
+							<li><a href="#">Руководство компании</a></li>
+							<li><a href="#">СМИ о нас</a></li>
+							<li><a href="#">Контакты</a></li>
+							<li><a href="#">Новости</a></li>
+						</ul>
+					</div>
+					<span class="navigation-bottom-menu__line"></span>
+					<span class="navigation-bottom-menu__line"></span>
+					<span class="navigation-bottom-menu__line"></span>
+				</div>
 			</div>
 		</div>
 	</header>
@@ -81,19 +81,18 @@
 						<h1 class="calc-item__title calc-item__title__color">Расчёт дохода по сбережениям</h1>
 						<div class="calc-item-add">
 							<label for="amount" class="calc-item__label">Cумма</label> 
-							<input type="number" min="3000" max="100000000" maxlength="9" value="400000" name="amount" class="calc-item__input">
+							<input type="number" min="3000" max="100000000" maxlength="9" value="400000" name="amount" class="calc-item__input summ-value">
 						</div>
-						<input type="range" min="0" max="100" value="0" step="1" class="calc-item-add__range" id="summ-range" required/>
+						<input type="range" min="3000" max="10000000" value="0" step="1000" class="calc-item-add__range summ-range" id="summ-range" required/>
 						<div class="calc-item-add-description">
-							<p>20 000</p>
-							<p>10 000 0000</p>
+							<p>3 000</p>
+							<p>100 000 000</p>
 						</div>
 						<div class="calc-item-add"> 
-								<label for="month" class="calc-item__label">Cрок</label> 
-								<input type="text" name="month" class="calc-item__input">
-	
+                            <label for="month" class="calc-item__label">Cрок (месяцев)</label> 
+                            <input type="text" name="month" value="3" onkeypress="return false" class="calc-item__input time-value">
 						</div>
-						<input type="range" min="0" max="100" value="0" step="1" class="calc-item-add__range" id="time-range" required/>
+						<input type="range" min="3" max="36" value="0" step="3" class="calc-item-add__range time-range" id="time-range" required/>
 						<div class="calc-item-add-description">
 							<p>3 месяца</p>
 							<p>3 года</p>
@@ -106,25 +105,26 @@
 						<div class="calc-result">
 							<div class="calc-result-percent">
 								<p class="calc-result__title calc-result__title__color">Процент</p>
-								<p class="calc-result__info">13%</p>
+								<p class="calc-result__info">7%</p>
 							</div>
 							<div class="calc-result-taxes">
 								<p class="calc-result__title calc-result__title__color">Налог</p>
-								<p class="calc-result__info">2100</p>
+								<p class="calc-result__info">0р.</p>
 							</div>
 							<div class="calc-result-income">
 								<p class="calc-result__title calc-result__title__color">Доход (чистыми)</p>
-								<p class="calc-result__info">101 900</p>
+								<p class="calc-result__info">7000р.</p>
 							</div>
 						</div>
 					</div>
                     <div class="saving-options">
                             <p class="saving-options__text">для меня важен:</p>
-                            <button class="saving-options__button">максимальный доход</button>
-                            <button class="saving-options__button">возможность чдс</button>
+                            <input type="radio" id="max-income" name="importance" class="saving-radio">
+                            <label for="max-income" class="saving-options__button">максимальный доход</label>
+                            <input type="radio" id="withdrawal" name="importance" class="saving-radio">
+                            <label for="withdrawal" class="saving-options__button">возможность чдс</label>
                             <button class="saving-options__program">ПРОГРАММА «ДОХОД»</button>
                             <button class="saving-options__program">ПРОГРАММА «КОМФОРТ»</button>
-
                         </div>
                     </div>
                     <div class="saving-button-wrap">
@@ -267,66 +267,65 @@
             </div>
         </section>
     </main>
-    	<footer>
-			<section class="contacts contacts-blue">
-				<div class="container">
-					<div class="contacts-wrap">
-						<div class="contacts-logo">
-							<img src="img/footer/logo-2.png" alt="">
-							<div class="contacts-info-town contacts-mobile">
-								<p>Саратов</p>
-								<div class="svg" data-src="img/media/button-down.svg"></div>
-							</div>
+    <footer>
+		<section class="contacts contacts-blue">
+			<div class="container">
+				<div class="contacts-wrap">
+					<div class="contacts-logo">
+						<img src="img/footer/logo-2.png" alt="">
+						<div class="contacts-info-town contacts-mobile">
+							<p>Саратов</p>
+							<div class="svg" data-src="img/media/button-down.svg"></div>
 						</div>
-						<div class="contacts-info">
-							<div class="contacts-info-town  contacts-desktop">
-								<p>Саратов</p>
-								<div class="svg" data-src="img/media/button-down.svg"></div>
-							</div>
-							<div class="contacts-info-adress">
-								<p>Адрес: ул. Советская, 86/70</p>
-								<div class="contacts-info-adress-number">
-									<p>тел.:</p>
-									<div>
-										<a  class="contacts-info-adress-number__phone" href="#">8 800 775 64 44</a>
-										<a class="contacts-info-adress-number__phone" href="#">(8452) 49 33 33</a>
-									</div>
+					</div>
+					<div class="contacts-info">
+						<div class="contacts-info-town  contacts-desktop">
+							<p>Саратов</p>
+							<div class="svg" data-src="img/media/button-down.svg"></div>
+						</div>
+						<div class="contacts-info-adress">
+							<p>Адрес: ул. Советская, 86/70</p>
+							<div class="contacts-info-adress-number">
+								<p>тел.:</p>
+								<div>
+									<a  class="contacts-info-adress-number__phone" href="#">8 800 775 64 44</a>
+									<a class="contacts-info-adress-number__phone" href="#">(8452) 49 33 33</a>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</section>
-			<section class="footnav">
-				<div class="container">
-					<div class="footnav-wrap">
-						<div class="footnav-media">
-							<p class="footnav-media__link">© ovk-volga.ru 2011-2018</p>
-							<div class="footnav-media-icons">
-								<a href="#"><img src="img/media/facebook-logo.svg" alt="" class="footnav-media-icons__item"></a>
-								<a href="#"><img src="img/media/youtube-logo.svg" alt="" class="footnav-media-icons__item"></a>
-								<a href="#"><img src="img/media/vk-logo.svg" alt="" class="footnav-media-icons__item"></a>
-								<a href="#"><img src="img/media/odnoklassniki-logo.svg" alt="" class="footnav-media-icons__item"></a>
-							</div>
-						</div>
-						<div class="footnav-navigation">
-							<div class="footnav-navigation-row">
-								<a href="#" class="footnav-navigation-row__link">Заёмщикам</a>
-								<a href="#" class="footnav-navigation-row__link">Материнский капитал</a>
-								<a href="#" class="footnav-navigation-row__link">Сберегателям</a>
-								<a href="#" class="footnav-navigation-row__link">О нас</a>
-							</div>
-							<div class="footnav-navigation-row">
-								<a href="#" class="footnav-navigation-row__link">Руководство компании</a>
-								<a href="#" class="footnav-navigation-row__link">СМИ о нас</a>
-								<a href="#" class="footnav-navigation-row__link">Контакты</a>
-								<a href="#" class="footnav-navigation-row__link">Новости</a>
-							</div>
-	
+			</div>
+		</section>
+		<section class="footnav">
+			<div class="container">
+				<div class="footnav-wrap">
+					<div class="footnav-media">
+						<p class="footnav-media__link">© ovk-volga.ru 2011-2018</p>
+						<div class="footnav-media-icons">
+							<a href="#"><img src="img/media/facebook-logo.svg" alt="" class="footnav-media-icons__item"></a>
+							<a href="#"><img src="img/media/youtube-logo.svg" alt="" class="footnav-media-icons__item"></a>
+							<a href="#"><img src="img/media/vk-logo.svg" alt="" class="footnav-media-icons__item"></a>
+							<a href="#"><img src="img/media/odnoklassniki-logo.svg" alt="" class="footnav-media-icons__item"></a>
 						</div>
 					</div>
+					<div class="footnav-navigation">
+						<ul class="footnav-navigation-row">
+							<li><a href="#">Заёмщикам</a></li>
+							<li><a href="#">Материнский капитал</a></li>
+							<li><a href="#">Сберегателям</a></li>
+							<li><a href="#">О нас</a></li>
+						</ul>
+						<ul class="footnav-navigation-row">
+							<li><a href="#">Руководство компании</a></li>
+							<li><a href="#">СМИ о нас</a></li>
+							<li><a href="#">Контакты</a></li>
+							<li><a href="#">Новости</a></li>
+						</ul>
+					</div>
 				</div>
-			</section>
+			</div>
+		</section>
 	</footer>
     <script src="vendors/jQuery/jquery-3.0.0.min.js"></script>
     <script src="vendors/owl-carousel/owl.carousel.min.js"></script>

@@ -24,16 +24,21 @@
         flex-wrap: wrap;
         height:  57px;
         align-items: center;
-        &__item {
+        li {
             position: relative;
             flex-basis: 35%;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100%;
-            color: #7d7d7d;
-            text-transform: uppercase;
-            transition: 0.3s;
+            a {
+                color: #7d7d7d;
+                text-transform: uppercase;
+                transition: 0.3s;
+                &:hover {
+                    color: #259b00;
+                }
+            }
             &:after {
                 position: absolute;
                 top: 100%;
@@ -46,7 +51,6 @@
                 transition: 0.3s
             }
             &:hover {
-                color: #259b00;
                 &:after {
                         width: 100%;
                     }
@@ -97,18 +101,14 @@
         display: flex;
         align-items: center;
         &-menu {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
             display: flex;
-            width: 70%;
+            width: 60%;
             justify-content: center;
             align-items: center;
-            &__item {
+            li {
                 list-style: none;
                 text-transform: uppercase;
-                margin: 0 30px;
+                margin: 0 50px;
                 position: relative;
                 &:nth-child(3) {
                     margin-right: 0;
@@ -155,14 +155,19 @@
             }
             li {
                 list-style: none;
-                color: #515151;
-                font-family: "Tahoma", sans-serif;
-                font-size: 16px;
                 padding: 15px 40px;
                 transition: 0.3s;
+                a {
+                    color: #515151;
+                    font-family: "Tahoma", sans-serif;
+                    font-size: 16px;
+                    transition: 0.3s;
+                }
                 &:hover {
                     background: #259b00;
-                    color: white;
+                    a {
+                        color: white;
+                    }
                 }
             }
         }
@@ -288,7 +293,8 @@
         } 
         &-bottom {
             &-menu {
-                width: 100%;
+                width: 90%;
+                justify-content: center;
             }
         }
         &-list {
@@ -307,13 +313,12 @@
         &-connect-item {
             flex-basis: 50%;
         }
-        &-list__item {
+        &-list li {
             flex-basis: 50%;
         }
         &-bottom-menu {
             justify-content: space-between;
-            padding: 0 30px;
-            &__item {
+            li {
                 margin: 0;
             }
         }
