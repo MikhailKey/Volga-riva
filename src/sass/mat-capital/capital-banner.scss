@@ -12,6 +12,9 @@
         width: 100%;
         height: 570px;
         position: relative;
+        &__ruble {
+            height: 60px;
+        }
         &-content {
             width: 570px;
             height: 310px;
@@ -151,6 +154,9 @@
                 width: 80%;
                 height: 250px;
             }
+            &__ruble {
+                height: 45px;
+            }
             &-title {
                 width: 110%;
                 height: 100px;
@@ -182,6 +188,9 @@
             &-content {
                 width: 80%;
                 height: 230px;
+            }
+            &__ruble {
+                height: 32px;
             }
             &-title {
                 width: 110%;

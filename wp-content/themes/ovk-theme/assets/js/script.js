@@ -74,8 +74,125 @@ $(document).ready(function(){
               }
         });
     }
-    if ($('.navigation-bottom-list')[0])
+
+    function showConnect()
     {
+        function changeAdress(pressedButton)
+        {
+            console.log(pressedButton);
+            let items = $('.connect-info-item');
+            items.each(function(i, item)
+            {
+                if ($(item).hasClass('connect-info-item__order')) {
+                    $(item).removeClass('connect-info-item__order');
+                }
+                if ($(item).find('h1').text().indexOf(pressedButton) > -1) {
+                    $(item).addClass('connect-info-item__order');
+                }
+            })
+        }
+        
+        function orderContacts()
+        {
+            if ($('.connect-info-item').length) {
+                let townData = JSON.parse(localStorage.getItem('townData'));
+                changeAdress(townData.town);
+            }
+        }
+        orderContacts()
+
+        function closeModal()
+        {
+            modal.fadeOut(100);
+            button.removeClass('navtop-open');
+        }
+        let navButton = $('.navtown-item');
+        let button =  $('.navigation-connect-wrap');
+        let modal = $('.navtop-modal');
+
+        navButton.on('click', function()
+        {
+            closeModal()
+            if ($('.connect-info-item').length) {
+                changeAdress($(this).text())
+            }
+        })
+
+        button.on('click', function()
+        {
+            if ($(this).hasClass('navtop-open')) {
+                closeModal()
+            } else {
+                closeModal()
+                $(this).siblings('.navtop-modal').fadeIn(500);
+                $(this).addClass('navtop-open');
+            }
+        })
+    }
+
+    showConnect()
+    
+    function hideConnect()
+    {
+        $(document).mouseup(function (e){ 
+            let div = $('.navtop-modal'); 
+            if (!div.is(e.target)
+                && div.has(e.target).length === 0) { 
+                div.fadeOut(); 
+            }
+        });
+    }
+
+    hideConnect()
+
+    function sendAdress() 
+    {
+        let firstPhone = document.querySelectorAll('.phone-first'),
+                secondPhone = document.querySelectorAll('.phone-second'),
+                adress = document.querySelectorAll('.adress-title'),
+                town = document.querySelectorAll('.town-title'),
+                townButtons = document.querySelectorAll('.navtown-item');
+                
+        function makeStorage() 
+        {
+            townButtons.forEach(function(button)
+            {
+                button.addEventListener('click', function()
+                {
+                    if (button.innerHTML === 'Другое') {
+                        return;
+                    } 
+                    let townData = {};
+                    townData.town = this.innerHTML;
+                    townData.adress = this.getAttribute('data-adress');
+                    townData.firstPhone = this.getAttribute('data-first-phone');
+                    townData.secondPhone = this.getAttribute('data-second-phone');
+
+                    localStorage.setItem('townData', JSON.stringify(townData));
+
+                    getStorage()
+                })
+            })
+        }
+        function getStorage()
+        {
+            let townData = JSON.parse(localStorage.getItem('townData')); 
+            town.forEach(function(town) {town.innerHTML = townData.town});
+            adress.forEach(function(adress) {adress.innerHTML = townData.adress});
+            firstPhone.forEach(function(phone) {phone.innerHTML = townData.firstPhone});
+            secondPhone.forEach(function(phone) {phone.innerHTML = townData.secondPhone});
+        }
+        
+        if (localStorage.getItem('townData')) {
+            getStorage()
+        } 
+        makeStorage()
+    }
+
+    sendAdress()
+
+    if ($('.navigation-bottom-list')[0])
+    {       
         if ($('.calc-item').length) {
 
             let stavkaRef = 12;
@@ -401,11 +518,16 @@ $(document).ready(function(){
             tariffButton.click(function()
             {
                 tariffWindow.fadeIn(500);
+                $('.tariff-info__background').fadeIn(500);
+                document.body.style.overflow = 'hidden';
             })
 
             closeButton.click(function()
             {
                 tariffWindow.fadeOut(500);
+                $('.tariff-info__background').fadeOut(500);
+                document.body.style.overflow = 'visible';
+
             })
         }
 
@@ -416,6 +538,9 @@ $(document).ready(function(){
                 if (!div.is(e.target)
                     && div.has(e.target).length === 0) { 
                     div.fadeOut(); 
+                    $('.tariff-info__background').fadeOut(500);
+                    document.body.style.overflow = 'visible';
+
                 }
             });
         }
@@ -518,4 +643,25 @@ $(document).ready(function(){
         activeBusinessLink('.b-navigation-bottom-menu li a', '.b-navigation-list li a');
 
     }
+    
+    $('#sample_slider').find('a').attr('data-fancybox', 'gallery');
+    $('.gallery-icon').find('a').attr('data-fancybox', 'gallery');
+    let linksArr = [];
+    linksArr.push($("div.sa_hover_container:contains('[embed]')"));
+    linksArr.push($("p:contains('[embed]')"));
+    linksArr[0].each(function(i, link)
+    {
+        let newString = $(link).html().replace('[embed]', '');
+        newString = newString.replace('[/embed]', '');
+        newString = newString.replace('<p>', '');
+        newString = newString.replace('</p>', '');
+        if (newString.indexOf('&')>=0) {
+            newString = newString.slice(0, newString.indexOf('&'));
+        }
+        newString = newString.replace('watch?v=', 'embed/');
+
+        let newLink = `<iframe class="feedback-video" src="${newString}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>`;
+        $(link).html(newLink);
+    })
+    
 });

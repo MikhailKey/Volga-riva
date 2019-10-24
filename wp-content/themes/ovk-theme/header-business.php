@@ -22,22 +22,74 @@
 					] ); ?>
                         <div class="b-navigation-connect">
                             <div class="b-navigation-connect-item">
-                            <p>Саратов</p>
+                            <div class="navigation-connect-wrap">
+                                <p class="town-title">Саратов</p>
                                 <div class="svg" data-src="<?php echo get_template_directory_uri(); ?>/assets/img/media/button-down.svg"></div>
+                            </div>
+                            <div class="navtown-list navtop-modal">
+                                <button data-adress="Ул. Советская 86/70 (угол ул. Пугачева), Литер А"
+                                        data-first-phone="8 (8452) 49-33-33"
+                                        data-second-phone="8 (800) 775-64-44 (факс)" 
+                                        class="navtown-item">Саратов</button>
+                                <button data-adress="ул. М. Горького, 28"
+                                        data-first-phone="8 (800) 755-64-44"
+                                        data-second-phone="8 (8453) 530-630 (факс)"
+                                        class="navtown-item">Энгельс</button>
+                                <button data-adress="ул. Северная, 311/1, оф.19"
+                                        data-first-phone="8 (8452) 49-33-33"
+                                        data-second-phone="8 (800) 775 64 44 (факс)"
+                                        class="navtown-item">Краснодар</button>
+                                <button data-adress="Московский пр., 7Е, оф. 226 (БЦ «Плаза»)"
+                                        data-first-phone="8 (473) 254-64-44"
+                                        data-second-phone="8 (800) 775 64 44 (факс)"
+                                        class="navtown-item">Воронеж</button>
+                                <button data-adress="ул. Войкова, д.1/1, оф.23"
+                                        data-first-phone="8 (862) 259-0123"
+                                        data-second-phone="8 (800) 775 64 44 (факс)"
+                                        class="navtown-item">Сочи</button>
+                                <button data-adress="ул.Минаева 11 (ТРК СПАРТАК), оф.201"
+                                        data-first-phone="8 (8422) 717-333"
+                                        data-second-phone="8 (800) 775 64 44 (факс)"
+                                        class="navtown-item">Ульяновск</button>
+                                <button data-adress="ул. Революционная, 18"
+                                        data-first-phone="8 (917) 301 05 55"
+                                        data-second-phone="8 (800) 775 64 44 (факс)"
+                                        class="navtown-item">Вольск</button>
+                                <button class="navtown-item">Другое</button>
+                            </div>
                             </div>
                             <div class="b-navigation-connect-item">
-                                <p>Контакты</p>
-                                <div class="svg" data-src="<?php echo get_template_directory_uri(); ?>/assets/img/media/button-down.svg"></div>
+                                <div class="navigation-connect-wrap">
+                                    <p>Контакты</p>
+                                    <div class="svg" data-src="<?php echo get_template_directory_uri(); ?>/assets/img/media/button-down.svg"></div>
+                                </div>
+                                <div class="navconnect-list navtop-modal">
+                                    <p class="navconnect-town town-title">Саратов</p>
+                                    <p class="navconnect-adress adress-title">Адрес: ул. Советская, 86/70</p>
+                                    <div class="navconnect-time">
+                                        <h5>Режим работы</h5>
+                                        <p>пн-чт 9.00-18:00</p>
+                                        <p>пт 9.00-17:00</p>
+                                        <p>Без перерыва</p>
+                                        <p>сб, вс - выходные дни</p>
+                                    </div>
+                                    <h3 class="navconnect-phone phone-first">8 800 775 64 44</h3>
+                                    <h3 class="navconnect-phone phone-second">+7 (8452) 49 33 33</h3>
+                                </div>
                             </div>
                         </div>
-                        <button class="b-navigation-button button desktop-hide">Приглашаем к сотрудничеству</button>
+                        <a href="http://ovk.asap-lp.ru/priglashaem_k_sotrudnichestvu/">
+                            <button class="b-navigation-button button desktop-hide">Приглашаем к сотрудничеству</button>
+                        </a> 
                     </div>
                 </div>
             </div>
             <div class="container">
                 <div class="b-navigation-middle">
                     <a href="index.html"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/business/business-mobile.png" alt=""></a>
-                    <button class="b-navigation-button button">Приглашаем к сотрудничеству</button>
+                    <a href="http://ovk.asap-lp.ru/priglashaem_k_sotrudnichestvu/">
+						<button class="navigation-button button ">Приглашаем к сотрудничеству</button>
+					</a>
                 </div>
             </div>
             <div class="container">

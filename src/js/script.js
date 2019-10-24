@@ -78,50 +78,247 @@ $(document).ready(function(){
               }
         });
     }
-    if ($('.navigation-bottom-list')[0])
-    {
-        function showConnect()
+    function mapProcess() {
+        let mapButton = $('.connect-button'),
+            closeButton = $('.connect-modal-scheme button'),
+            townTitle = $('.town-modal-title'),
+            townStatus = $('.connect-modal__status'),
+            townAdress = $('.connect-modal__adress'),
+            townWebsite = $('.connect-modal__link'),
+            townFirstNumber = $('.connect-modal__phone__first'),
+            innerModal = $('.town-modal'),
+            townButton = $('.town-modal-wrap'),
+            townSecondNumber = $('.connect-modal__phone__second');
+
+        function handleChangeAdress()
         {
-            function closeModal()
+            townButton.on('click', function()
             {
-                modal.fadeOut(100);
-                button.removeClass('navtop-open');
+                $(innerModal).fadeIn(300);
+            })
+            function hideModal()
+            {
+                $(document).mouseup(function (e){  
+                    if (!innerModal.is(e.target)
+                        && innerModal.has(e.target).length === 0) { 
+                        $(innerModal).fadeOut(250);
+                    }
+                });
             }
-            let navButton = $('.navtown-item');
-            let button =  $('.navigation-connect-wrap');
-            let modal = $('.navtop-modal');
-            navButton.on('click', function()
-            {
-                closeModal()
-            })
-            button.on('click', function()
-            {
-                if ($(this).hasClass('navtop-open')) {
-                    closeModal()
-                } else {
-                    closeModal()
-                    console.log('не сработало');
-                    $(this).siblings('.navtop-modal').fadeIn(500);
-                    $(this).addClass('navtop-open');
-                }
-            })
+            hideModal()
+        }
+        handleChangeAdress()
+
+        function sendAttributes(item) 
+        {
+            $(townTitle).html(item.attr('data-town'));
+            $(townStatus).html(item.attr('data-status'));
+            $(townAdress).html(item.attr('data-adress'));
+            if (item.attr('data-website').length) {
+                $(townWebsite).html(item.attr('data-website'));
+                $(townWebsite).attr('href', `https://${item.attr('data-website')}`)
+            } else {
+                $(townWebsite).html('')
+            }
+            $(townFirstNumber).html(item.attr('data-first-phone'));
+            $(townSecondNumber).html(item.attr('data-second-phone'));
+
         }
 
-        showConnect()
-        
-        function hideConnect()
+        mapButton.each(function(i, button)
+        {
+            $(button).on('click', function()
+            {
+                $('.connect-modal').fadeIn(250);
+                $('body').css('overflow', 'hidden');
+                
+                sendAttributes($(this));
+                let coordinates = JSON.parse($(this).attr('data-coordinates'));
+                $('#map').empty();
+                yandexMap(coordinates);
+            })
+        })
+
+        $(closeButton).on('click', function()
+        {
+            $('.connect-modal').fadeOut(250);
+            $('body').css('overflow', 'visible');
+        })
+
+        function hideMap()
         {
             $(document).mouseup(function (e){ 
-                let div = $('.navtop-modal'); 
+                let div = $('.connect-modal-container'); 
                 if (!div.is(e.target)
                     && div.has(e.target).length === 0) { 
-                    div.fadeOut(); 
+                    $('.connect-modal').fadeOut(250);
+                    $('body').css('overflow', 'visible');
                 }
             });
         }
+        hideMap()
 
-        hideConnect()
+        
+    }
+    mapProcess()
 
+    function yandexMap(coordinates){
+        if ($("#map").length > 0){
+            ymaps.ready(function () {
+                let description = ''
+                if (JSON.stringify(coordinates) === '[51.531825572387724,46.01106200000002]') {
+                    description = 'Адрес: Ул. Советская 86/70'
+                } else if (JSON.stringify(coordinates) === '[51.498775094836816,46.11590139814754]') {
+                    description = 'ул. М. Горького, 28'
+                } else if (JSON.stringify(coordinates) === '[45.03911564913005,38.98481291104504]') {
+                    description = 'ул. Северная, 311/1, оф.19'
+                } else if (JSON.stringify(coordinates) === '[51.68371724420709,39.183256728835964]') {
+                    description = 'Московский пр., 7Е, оф. 226 (БЦ "Плаза")'
+                } else if (JSON.stringify(coordinates) === '[43.580503399147226,39.71970927116393]') {
+                    description = 'ул. Войкова, д.1/1, оф.23'
+                } else if (JSON.stringify(coordinates) === '[54.308244521039086,48.38772785273916]') {
+                    description = ' ул.Минаева 11 (ТРК СПАРТАК), оф.201'
+                } else {
+                    description = 'ул. Революционная, 18'
+                }
+                var myMap = new ymaps.Map("map", {
+                    center: coordinates,
+                    zoom: 17,
+                    "multiTouch": false,
+                    controls: ['zoomControl']
+                }, {
+                    suppressMapOpenBlock: true
+                });
+                var myPlacemark = new ymaps.Placemark(coordinates, {
+                    hintContent: description
+                });
+                myMap.geoObjects.add(myPlacemark);
+                myMap.controls.remove('routeEditor');
+                myMap.behaviors.disable('scrollZoom');
+            });
+        }
+    }
+
+    function showConnect()
+    {
+        function changeAdress(pressedButton)
+        {
+            let items = $('.connect-info-item');
+            items.each(function(i, item)
+            {
+                if ($(item).hasClass('connect-info-item__order')) {
+                    $(item).removeClass('connect-info-item__order');
+                }
+                if ($(item).find('h1').text().indexOf(pressedButton) > -1) {
+                    $(item).addClass('connect-info-item__order');
+                }
+            })
+        }
+        
+        function orderContacts()
+        {
+            if ($('.connect-info-item').length) {
+                let townData = JSON.parse(localStorage.getItem('townData'));
+                changeAdress(townData.town);
+            }
+        }
+
+        
+
+        orderContacts()
+
+        function closeModal()
+        {
+            modal.fadeOut(100);
+            button.removeClass('navtop-open');
+        }
+        let navButton = $('.navtown-item');
+        let button =  $('.navigation-connect-wrap');
+        let modal = $('.navtop-modal');
+
+        navButton.on('click', function()
+        {
+            closeModal()
+            if ($('.connect-info-item').length) {
+                changeAdress($(this).text())
+            }
+        })
+
+        button.on('click', function()
+        {
+            if ($(this).hasClass('navtop-open')) {
+                closeModal()
+            } else {
+                closeModal()
+                $(this).siblings('.navtop-modal').fadeIn(500);
+                $(this).addClass('navtop-open');
+            }
+        })
+    }
+
+    showConnect()
+    
+    function hideConnect()
+    {
+        $(document).mouseup(function (e){ 
+            let div = $('.navtop-modal'); 
+            if (!div.is(e.target)
+                && div.has(e.target).length === 0) { 
+                div.fadeOut(); 
+            }
+        });
+    }
+
+    hideConnect()
+
+    function sendAdress() 
+    {
+        let firstPhone = document.querySelectorAll('.phone-first'),
+                secondPhone = document.querySelectorAll('.phone-second'),
+                adress = document.querySelectorAll('.adress-title'),
+                town = document.querySelectorAll('.town-title'),
+                townButtons = document.querySelectorAll('.navtown-item');
+                
+        function makeStorage() 
+        {
+            townButtons.forEach(function(button)
+            {
+                button.addEventListener('click', function()
+                {
+                    if (button.innerHTML === 'Другое') {
+                        return;
+                    } 
+                    let townData = {};
+                    townData.town = this.innerHTML;
+                    townData.adress = this.getAttribute('data-adress');
+                    townData.firstPhone = this.getAttribute('data-first-phone');
+                    townData.secondPhone = this.getAttribute('data-second-phone');
+
+                    localStorage.setItem('townData', JSON.stringify(townData));
+
+                    getStorage()
+                })
+            })
+        }
+        function getStorage()
+        {
+            let townData = JSON.parse(localStorage.getItem('townData')); 
+            town.forEach(function(town) {town.innerHTML = townData.town});
+            adress.forEach(function(adress) {adress.innerHTML = townData.adress});
+            firstPhone.forEach(function(phone) {phone.innerHTML = townData.firstPhone});
+            secondPhone.forEach(function(phone) {phone.innerHTML = townData.secondPhone});
+        }
+        
+        if (localStorage.getItem('townData')) {
+            getStorage()
+        } 
+        makeStorage()
+    }
+
+    sendAdress()
+
+    if ($('.navigation-bottom-list')[0])
+    {
         if ($('.calc-item').length) {
 
             let stavkaRef = 12;
@@ -561,7 +758,7 @@ $(document).ready(function(){
         showBusinessModal('.b-navigation-bottom-menu__hamburger', '.b-navigation-bottom-list');
         hideBusinessModal('.b-navigation-bottom-list');
         activeBusinessLink('.b-navigation-bottom-menu li a', '.b-navigation-list li a');
-
     }
+    
 });
 
