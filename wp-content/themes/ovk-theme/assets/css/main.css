@@ -33,10 +33,12 @@
 a {
   text-decoration: none;
 }
-
 body {
   background: white;
   font-family: 'Tahoma', sans-serif;
+}
+header {
+  border-bottom: 1px solid #efefef;
 }
 button {
   outline: none;
@@ -253,6 +255,7 @@ input {
   width: 60%;
   justify-content: center;
   align-items: center;
+  z-index: -1;
 }
 
 .b-navigation-bottom-menu li {
@@ -311,6 +314,8 @@ input {
 
 .b-navigation-bottom-list ul {
   padding-top: 60px;
+  height: 400px;
+  overflow: auto;
 }
 
 .b-navigation-bottom-list li {
@@ -803,7 +808,25 @@ input {
   margin-bottom: 10px;
   background: #8c8c8c;
 }
-
+@media (max-width: 1200px) {
+  .banner-bottom {
+    padding: 20px 0;
+  }
+}
+@media (max-width: 991px) {
+  .banner-bottom {
+    padding: 20px;
+  }
+  .banner-bottom-item__text {
+    font-size: 25px;
+  }
+  .banner-bottom-item__text__yellow {
+    font-size: 40px;
+  }
+  .banner-bottom-item__text:before {
+    margin-right: 12px;
+  }
+}
 @media (max-width: 768px) {
   .banner-bg {
     background: #eeeeee url("../img/header/baby-banner.png") no-repeat top -50px left -200px;
@@ -837,6 +860,7 @@ input {
     bottom: 0;
     left: 0;
     padding: 10px;
+    background: #fafafa;
   }
 
   .banner-bottom-item {
@@ -1156,7 +1180,11 @@ input[type='number'] {
   font-size: 17px;
   text-align: center;
 }
-
+@media (max-width: 1200px) {
+  .calc-item-checkbox__label {
+    padding-right: 33px;
+  }
+}
 @media (max-width: 991px) {
   .calc-wrap {
     padding: 30px;
@@ -1198,11 +1226,6 @@ input[type='number'] {
   .calc-item__title {
     font-size: 20px;
   }
-
-  .calc-item-checkbox__label {
-    font-size: 12px;
-  }
-
   .calc-result__title {
     font-size: 12px;
   }
@@ -1230,7 +1253,9 @@ input[type='number'] {
   border: 1px solid #bebebe;
   transition: 0.3s;
 }
-
+.choose-item__ruble {
+  height: 30px;
+}
 .choose-item:nth-child(3) .choose-item__description {
   width: 100%;
 }
@@ -1307,7 +1332,20 @@ input[type='number'] {
 .choose-item:hover {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
 }
-
+@media (max-width: 1200px) {
+  .choose-item__title {
+    font-size: 21px;
+  }
+  .choose-item__description {
+    font-size: 21px;
+  }
+  .choose-item {
+    padding: 15px;
+  }
+  .choose-item__button {
+    font-size: 14px;
+  }
+}
 @media (max-width: 991px) {
   .choose-wrap {
     justify-content: center;
@@ -1452,13 +1490,7 @@ input[type='number'] {
   .contacts-info-adress {
     flex-basis: 100%;
     margin: 0 auto;
-    text-align: center;
   }
-
-  .contacts-info-adress-number {
-    justify-content: center;
-  }
-
   .contacts-desktop {
     display: none;
   }
@@ -1487,6 +1519,9 @@ input[type='number'] {
 
   .contacts-info {
     padding-top: 30px;
+  }
+  .contacts-info-adress p {
+    text-align: center;
   }
 
   .contacts-mobile {
@@ -1670,6 +1705,7 @@ input[type='number'] {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   height: 100%;
 }
 .navigation-list li a {
@@ -1764,6 +1800,7 @@ input[type='number'] {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
+  z-index: -1;
 }
 
 .navigation-bottom-menu li {
@@ -1818,6 +1855,8 @@ input[type='number'] {
 
 .navigation-bottom-list ul {
   padding-top: 60px;
+  height: 400px;
+  overflow: auto;
 }
 
 .navigation-bottom-list li {
@@ -1973,7 +2012,10 @@ input[type='number'] {
 
 @media (max-width: 1200px) {
   .navigation-list {
-    flex-basis: 25%;
+    flex-basis: 30%;
+  }
+  .navigation-list:nth-child(1) {
+    flex-basis: 49%;
   }
   .navigation-bottom-menu__hamburger {
     margin-right: 15%;
@@ -2104,17 +2146,24 @@ input[type='number'] {
   padding-bottom: 60px;
 }
 .rule {
-  border-top: 1px solid #caccce;
   padding-bottom: 20px;
 }
 
-.rule__button {
+.secondary-title {
   color: #ffffff;
   background: #006eb6;
   font-size: 24px;
+  text-transform: uppercase;
+  font-weight: normal;
   padding: 20px;
   border: none;
   margin: 38px 0 20px 0;
+  display: inline-block;
+  text-align: center;
+  min-width: 200px;
+}
+.secondary-title__wrap {
+  padding: 20px 0 40px 0;
 }
 
 .rule-positions {
@@ -2144,6 +2193,9 @@ input[type='number'] {
 .rule-positions-list li {
   list-style: none;
 }
+.rule-positions-list a {
+  color: black;
+}
 
 .rule-positions-list li:before {
   content: '';
@@ -2154,7 +2206,11 @@ input[type='number'] {
   margin-bottom: 1px;
   margin-right: 20px;
 }
-
+@media (max-width: 700px) {
+  .rule-positions {
+    padding: 15px;
+  }
+}
 .rule-laws {
   padding-bottom: 50px;
 }
@@ -2319,7 +2375,11 @@ input[type='number'] {
     width: 110%;
   }
 }
-
+@media (max-width: 715px) {
+  .capital-banner-offer__text {
+    font-size: 30px;
+  }
+}
 @media (max-width: 600px) {
   .capital-bg {
     background: url("../img/capital/capital-mobile.png") no-repeat center bottom -50px;
@@ -2680,7 +2740,7 @@ input[type='number'] {
 
   .capital-count-content__subtitle {
     font-size: 16px;
-    width: 370px;
+    width: 340px;
     top: 120%;
     left: 60%;
   }
@@ -2975,6 +3035,7 @@ input[type='number'] {
   padding-bottom: 23px;
 }
 .saving-options__button {
+  text-align: start;
   display: block;
   text-transform: uppercase;
   position: relative;
@@ -3424,6 +3485,7 @@ input[type='number'] {
 }
 .tariff-info__background {
   position: fixed;
+  overflow: auto;
   display: none;
   z-index: 500;
   top: 50%;
@@ -3824,7 +3886,78 @@ input[type='number'] {
     justify-content: flex-end;
   }
 }
+.city-choose {
+  text-align: center;
+}
 
+.city-choose__button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #006eb6;
+  font-size: 18px;
+  padding: 5px;
+}
+
+.city-modal {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 151;
+  display: none;
+}
+
+.city-modal-content {
+  background: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.city-modal-inside {
+  width: 100%;
+  padding: 25px;
+  position: relative;
+}
+
+.city-modal-inside svg {
+  position: absolute;
+  right: 15px;
+  cursor: pointer;
+  top: 15px;
+  width: 15px;
+  height: 15px;
+  transition: 0.3s;
+}
+
+.city-modal-inside svg:hover {
+  fill: #006eb6;
+}
+
+.city-ask {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+
+.city-ask h4 {
+  font-size: 24px;
+  padding-bottom: 5px;
+}
+
+.city-ask button {
+  margin-left: 20px;
+  font-size: 22px;
+  color: white;
+  cursor: pointer;
+  background: #006eb6;
+  padding: 5px 10px;
+  border: none;
+}
 .pagination-numbers {
   list-style: none;
   display: flex;
@@ -3856,52 +3989,97 @@ input[type='number'] {
 .pagination-arrow:hover {
   color: #00568F;
 }
-.connect-subtitle {
-  font-size: 24px;
-  color: #00568F;
-  text-align: center;
-  max-width: 680px;
+.connect-add {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 70%;
   margin: 0 auto;
-  line-height: 136%;
-  padding: 40px 0 20px 0;
-}
-
-.connect-more {
   padding: 40px 0;
 }
 
-.connect-more a {
-  font-weight: bold;
-  color: #00568F;
-  line-height: 150%;
-  padding: 3px 0;
+.connect-time h4 {
+  padding-bottom: 10px;
+  font-weight: normal;
 }
 
-.connect-more-inline {
-  display: inline-block;
-  line-height: 150%;
+.connect-time p {
+  line-height: 200%;
 }
 
-.connect-info-main {
-  padding: 25px 0 50px 0;
-  border-bottom: 1px solid #006EB6;
+.connect-time p span {
+  color: #006eb6;
+}
+
+.connect-feedback__padding {
+  padding-top: 20px;
+}
+
+.connect-feedback__button {
+  background: none;
+  color: #006eb6;
+  border: 1px solid #006eb6;
+  padding: 10px 18px;
+  cursor: pointer;
+  font-size: 22px;
+  text-transform: uppercase;
+  margin: 15px 0;
+  transition: 0.3s;
+}
+
+.connect-feedback__button:hover {
+  color: white;
+  background: #006eb6;
+}
+
+.connect-button {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.connect-more__middle {
   text-align: center;
 }
 
-.connect-info-main h1 {
-  color: #00568F;
-  padding-bottom: 20px;
+.connect-more__phone {
+  color: white;
+  background: #006eb6;
+  display: block;
+  width: 300px;
+  text-align: center;
+  padding: 10px;
+  font-size: 22px;
+  margin: 10px auto 5px auto;
 }
 
-.connect-info-main p {
-  color: #535353;
-  font-size: 16px;
-  line-height: 150%;
+.connect-info-main h4 {
+  padding: 30px 0 10px 0;
+  font-weight: normal;
+}
+
+.connect-info-main li {
+  list-style: none;
+  padding-left: 20px;
+  line-height: 200%;
+  position: relative;
+  font-size: 14px;
+}
+
+.connect-info-main li:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 7px;
+  height: 7px;
+  background: #006eb6;
 }
 
 .connect-info-list {
-  border-bottom: 1px solid #00568F;
-  padding-bottom: 25px;
+  border-top: 1px solid #00568F;
+  padding: 50px 0;
   display: flex;
   flex-wrap: wrap;
 }
@@ -3909,15 +4087,10 @@ input[type='number'] {
 .connect-info-item {
   width: 250px;
   height: 250px;
-  margin: 0 100px 50px 0;
   position: relative;
-  border-right: 1px solid #e2e2e2;
+  margin: 0 100px 50px 0;
 }
-.connect-button {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-}
+
 .connect-info-item h1 {
   color: #00568F;
   font-size: 18px;
@@ -3954,9 +4127,222 @@ input[type='number'] {
   line-height: 150%;
 }
 
+.connect-modal {
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.3);
+  display: none;
+}
+
+.connect-modal-map {
+  width: 100%;
+  height: 345px;
+  border: 1px solid #c4c9cc;
+}
+
+.connect-modal-adress {
+  padding-right: 50px;
+}
+
+.connect-modal-scheme {
+  width: 600px;
+  height: 100%;
+}
+
+.connect-modal-scheme button {
+  position: absolute;
+  border: none;
+  background: none;
+  top: 10px;
+  cursor: pointer;
+  color: #535353;
+  right: 20px;
+  transition: 0.3s;
+  font-size: 35px;
+}
+
+.connect-modal-scheme button:hover {
+  color: #f0b30d;
+}
+
+.connect-modal-scheme p {
+  padding-bottom: 10px;
+}
+
+.connect-modal__link {
+  color: #00568F;
+  display: block;
+  margin: 10px 0;
+}
+
+.connect-modal__phone {
+  color: #535353;
+  font-size: 18px;
+}
+
+.connect-modal__time {
+  padding-bottom: 30px;
+}
+
+.connect-modal-container {
+  position: fixed;
+  background: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 40px;
+  display: flex;
+  height: 450px;
+}
+
+.connect-modal__status {
+  color: #828282;
+  padding-top: 10px;
+}
+
+.connect-modal__adress {
+  width: 220px;
+  padding-top: 20px;
+}
+
+.town-modal {
+  background: white;
+  position: absolute;
+  z-index: 101;
+  width: 200px;
+  top: 70px;
+  left: 40px;
+  border: 1px solid #c4c9cc;
+  display: none;
+}
+
+.town-modal__item {
+  display: block;
+  width: 100%;
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 7px 0 7px 10px;
+  transition: 0.3s;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.town-modal__item:hover {
+  background: #006eb6;
+  color: white;
+}
+
+.town-modal-title {
+  color: #535353;
+}
+
+.town-modal-wrap {
+  display: flex;
+  cursor: pointer;
+}
+
+.town-modal-wrap svg {
+  width: 10px;
+  height: auto;
+  fill: #f0b30d;
+  margin-top: 2px;
+  margin-left: 10px;
+}
+
+.connect-info-item__order {
+  order: -1;
+}
+
+@media (max-width: 1200px) {
+  .connect-info-item {
+    margin: 0 50px 50px 0;
+  }
+
+  .connect-modal-adress {
+    padding-right: 25px;
+  }
+
+  .connect-modal-scheme {
+    width: 500px;
+  }
+}
+
+@media (max-width: 991px) {
+  .connect-modal-adress {
+    padding-right: 25px;
+  }
+
+  .connect-modal-scheme {
+    width: 400px;
+  }
+
+  .connect-modal-map {
+    height: 280px;
+  }
+
+  .connect-modal-container {
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .connect-add {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .connect-time {
+    text-align: center;
+  }
+
+  .connect-feedback {
+    padding-top: 30px;
+    text-align: center;
+  }
+  .connect-info-main li {
+    padding: 0;
+  }
+  .connect-info-main li:before {
+    display: none
+  }
+  .connect-modal-container {
+    flex-wrap: wrap;
+  }
+
+  .connect-modal-scheme p {
+    padding-top: 30px;
+  }
+}
+
 @media (max-width: 750px) {
   .connect-info-item {
     margin-right: 0;
+  }
+}
+
+@media (max-width: 550px) {
+  .connect-modal-container {
+    padding: 20px;
+  }
+
+  .connect-modal-scheme {
+    width: 300px;
+  }
+
+  .connect-modal-map {
+    height: 200px;
+  }
+
+  .town-modal {
+    top: 50px;
+    left: 20px;
   }
 }
 
@@ -3971,6 +4357,31 @@ input[type='number'] {
 
   .connect-info-item {
     margin: 0 auto 50px auto;
+  }
+
+  .connect-button {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 375px) {
+  .connect-modal-container {
+    padding: 0;
+  }
+
+  .connect-modal-scheme button {
+    top: 0px;
+    right: 10px;
+  }
+
+  .connect-modal-scheme p {
+    padding-top: 0;
+    padding-left: 20px;
+  }
+
+  .connect-modal-adress {
+    padding: 20px;
   }
 }
 .zaimy-banner {
@@ -4517,7 +4928,11 @@ input[type='number'] {
     font-size: 60px;
   }
 }
-
+@media (max-width: 700px) {
+  .zaimy-count {
+    background-color: transparent;
+  }
+}
 @media (max-width: 500px) {
   .zaimy-count-slider {
     background-position-x: -100px;
@@ -4845,23 +5260,49 @@ input[type='number'] {
 .about-content {
   margin-bottom: 100px;
 }
-
-.about-props {
-  display: flex;
-  flex-wrap: wrap;
-  padding-bottom: 62px;
+.about-text {
+  padding-bottom: 55px;
+  border-bottom: 1px solid #d1d1d1;
 }
 
+.about-text p {
+  line-height: 200%;
+}
 .about-prop {
   flex-basis: 50%;
 }
-
+.about-wrap {
+  padding: 40px;
+  background: white;
+  margin-bottom: 30px;
+}
+@media (max-width: 650px) {
+  .about-wrap {
+    padding: 20px;
+  }
+}
+@media (max-width: 450px) {
+  .about-wrap {
+    padding: 5px;
+  }
+  .about-text p {
+    font-size: 13px;
+  }
+}
+.about-us {
+  background: rgb(243, 243, 243);
+}
 .about-prop p {
-  font-size: 18px;
+  font-size: 14px;
   padding-bottom: 24px;
   width: 100%;
 }
-
+.about-subtitle {
+  padding-top: 55px;
+  color: #006eb6;
+  font-size: 18px !important;
+  font-family: 'Tahoma', sans-serif;
+}
 .about-slider {
   text-align: center;
   padding: 0 4%;
@@ -5100,6 +5541,81 @@ input[type='number'] {
   bottom: 0;
   left: 40px;
 }
+
+
+.partners-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 30px 0 50px 0;
+  justify-content: space-around;
+}
+
+.partners-link {
+  color: #006eb6;
+  text-decoration: underline;
+}
+
+.partners-item {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  padding: 20px;
+  flex-basis: 45%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  margin-bottom: 50px;
+}
+
+.partners-item img {
+  padding: 25px;
+}
+
+.partners-item h4 {
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #3d3d3d;
+  line-height: 150%;
+}
+
+.partners-item:hover .partners-info {
+  transform: translateY(0);
+}
+
+.partners-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  min-height: 240px;
+  width: 100%;
+  padding: 25px 25px 25px 15px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid #b1b1b1;
+  transition: 0.3s;
+  transform: translateY(100%);
+}
+
+.partners-info p {
+  line-height: 150%;
+  padding-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .partners-item {
+    flex-basis: 100%;
+  }
+
+  .partners-list {
+    width: 400px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 450px) {
+  .partners-list {
+    width: 100%;
+  }
+}
+
 .regular-list {
   border-top: 1px solid #bfbfbf;
   padding-bottom: 50px;
@@ -5402,7 +5918,49 @@ input[type='number'] {
 }
 #gallery-1 figure {
   padding: 10px;
+  width: 16.66%;
+}
+@media (max-width: 991px) {
+  #gallery-1 figure {
+    width: 25%;
+  }
+}
+@media (max-width: 768px) {
+  #gallery-1 figure {
+    width: 33%;
+  }
+}
+@media (max-width: 550px) {
+  #gallery-1 figure {
+    width: 50%;
+  }
+}
+@media (max-width: 400px) {
+  #gallery-1 figure {
+    width: 100%;
+    text-align: center;
+  }
 }
 .connect-info-item__order {
   order: -1;
+}
+.bitrix-container {
+  overflow: auto;
+  position: fixed;
+  z-index: 500;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.3);
+  display: none;
+}
+
+.bitrix-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  width: 600px;
+  background: white;
 }

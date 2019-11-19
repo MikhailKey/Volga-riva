@@ -55,7 +55,10 @@
 				</div>
 			</div>
 		</section>
-    </footer>
+	</footer>
+	<script type="text/javascript">
+	disableSelection(document.body)
+	</script>
 	<?php wp_footer(); ?>
 	<script>
 

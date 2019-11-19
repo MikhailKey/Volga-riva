@@ -13,10 +13,13 @@
 <section class="reviews">
     <div class="container">
         <div class="reviews-wrap">
-            <div class="page-header">
+            <div class="secondary-title__wrap">
+                <h1 class="secondary-title">Отзывы</h1>
+            </div>
+            <!-- <div class="page-header">
                 <img src="/wp-content/themes/ovk-theme/assets/img/header/title-line.png" alt="" />
                 <h1>Отзывы</h1>
-            </div>
+            </div> -->
             <div class="reviews-examples">
                 <?php echo $post->post_content; ?>
             </div>

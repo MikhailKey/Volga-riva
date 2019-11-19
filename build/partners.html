@@ -9,9 +9,12 @@
 	<link rel="shortcut icon" type='image/png' href="img/icons/favicon.ico" />
 	<title>Поволжское ОВК</title>
 	<link rel="stylesheet" href="css/main.css" type="text/css">
-</head>
+	<link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="vendors/owl-carousel/owl.theme.default.min.css" type="text/css">
+    <link rel="stylesheet" href="vendors/fancybox/jquery.fancybox.min.css">
 <body>
 	<header>
+        <div></div>
 		<div class="navigation-bg">
 			<div class="container">
 				<div class="navigation">
@@ -21,60 +24,12 @@
 					</ul>
 					<div class="navigation-connect">
 						<div class="navigation-connect-item">
-						<div class="navigation-connect-wrap">
-							<p class="town-title">Саратов</p>
+						<p>Саратов</p>
 							<div class="svg" data-src="img/media/button-down.svg"></div>
-						</div>
-						<div class="navtown-list navtop-modal">
-							<button data-adress="Ул. Советская 86/70 (угол ул. Пугачева), Литер А"
-									data-first-phone="8 (8452) 49-33-33"
-									data-second-phone="8 (800) 775-64-44 (факс)" 
-									class="navtown-item">Саратов</button>
-							<button data-adress="ул. М. Горького, 28"
-									data-first-phone="8 (800) 755-64-44"
-									data-second-phone="8 (8453) 530-630 (факс)"
-									class="navtown-item">Энгельс</button>
-							<button data-adress="ул. Северная, 311/1, оф.19"
-									data-first-phone="8 (8452) 49-33-33"
-									data-second-phone="8 (800) 775 64 44 (факс)"
-									class="navtown-item">Краснодар</button>
-							<button data-adress="Московский пр., 7Е, оф. 226 (БЦ «Плаза»)"
-									data-first-phone="8 (473) 254-64-44"
-									data-second-phone="8 (800) 775 64 44 (факс)"
-									class="navtown-item">Воронеж</button>
-							<button data-adress="ул. Войкова, д.1/1, оф.23"
-									data-first-phone="8 (862) 259-0123"
-									data-second-phone="8 (800) 775 64 44 (факс)"
-									class="navtown-item">Сочи</button>
-							<button data-adress="ул.Минаева 11 (ТРК СПАРТАК), оф.201"
-									data-first-phone="8 (8422) 717-333"
-									data-second-phone="8 (800) 775 64 44 (факс)"
-									class="navtown-item">Ульяновск</button>
-							<button data-adress="ул. Революционная, 18"
-									data-first-phone="8 (917) 301 05 55"
-									data-second-phone="8 (800) 775 64 44 (факс)"
-									class="navtown-item">Вольск</button>
-							<button class="navtown-item">Другое</button>
-						</div>
 						</div>
 						<div class="navigation-connect-item">
-						<div class="navigation-connect-wrap">
 							<p>Контакты</p>
 							<div class="svg" data-src="img/media/button-down.svg"></div>
-						</div>
-						<div class="navconnect-list navtop-modal">
-							<p class="navconnect-town town-title">Саратов</p>
-							<h3 class="navconnect-phone phone-first">8 800 775 64 44</h3>
-							<h3 class="navconnect-phone phone-second">+7 (8452) 49 33 33</h3>
-							<p class="navconnect-adress adress-title">Адрес: ул. Советская, 86/70</p>
-							<div class="navconnect-time">
-								<h5>Режим работы</h5>
-								<p>пн-чт 9.00-18:00</p>
-								<p>пт 9.00-17:00</p>
-								<p>Без перерыва</p>
-								<p>сб, вс - выходные дни</p>
-							</div>
-						</div>
 						</div>
 					</div>
 					<button class="navigation-button button desktop-hide">Приглашаем к сотрудничеству</button>
@@ -114,18 +69,37 @@
 				</div>
 			</div>
 		</div>
-	</header>
-	<main>
-		<div class="bitriks-container">
-			<div class="bitriks-content" > 
-					 
-			</div>
-		</div>
-		<div class="container some-wrap">
-			<button class="button">Применить</button>
-		</div>
-	</main>
-	<footer>
+    </header>
+    <main>
+        <section class="partners">
+            <div class="container">
+                <h1>Партнеры</h1>
+                <div class="partners-list">
+                    <div class="partners-item">
+                        <img src="img/partners/liga-kreditnyh-soyuzov.png" alt="">
+                        <h4>Лига кредитных союзов</h4>
+                        <a class="partners-link"href="">www.orena.ru</a>
+                        <div class="partners-info">
+                            <h4>Лига кредитных союзов</h4>
+                            <a class="partners-link"href="">www.orena.ru</a>
+                            <p>Лига кредитных союзов образована в ноябре 1994 года, является добровальным соединение кредитных потребительских кооперативов граждан и иных некоммерческих организаций финансовой взаимопомощи и их объединений </p>                    
+                        </div>
+                    </div>
+                     <div class="partners-item">
+                        <img src="img/partners/torgovo-promyishlennaya-palata.png" alt="">
+                        <h4>ТОРГОВО-ПРОМЫШЛЕННАЯ ПАЛАТА САРАТОВСКОЙ ОБЛАСТИ</h4>
+                        <a class="partners-link"href="">www.orena.ru</a>
+                        <div class="partners-info">
+                            <h4>ТОРГОВО-ПРОМЫШЛЕННАЯ ПАЛАТА САРАТОВСКОЙ ОБЛАСТИ</h4>
+                            <a class="partners-link"href="">www.orena.ru</a>
+                            <p>Лига кредитных союзов образована в ноябре 1994 года, является добровальным соединение кредитных потребительских кооперативов граждан и иных некоммерческих организаций финансовой взаимопомощи и их объединений </p>                    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
 		<section class="contacts contacts-blue">
 			<div class="container">
 				<div class="contacts-wrap">
@@ -138,16 +112,16 @@
 					</div>
 					<div class="contacts-info">
 						<div class="contacts-info-town  contacts-desktop">
-							<p class="town-title">Саратов</p>
+							<p>Саратов</p>
 							<div class="svg" data-src="img/media/button-down.svg"></div>
 						</div>
 						<div class="contacts-info-adress">
-							<p class="adress-title">Адрес: ул. Советская, 86/70</p>
+							<p>Адрес: ул. Советская, 86/70</p>
 							<div class="contacts-info-adress-number">
 								<p>тел.:</p>
 								<div>
-									<a  class="contacts-info-adress-number__phone phone-first" href="#">8 800 775 64 44</a>
-									<a class="contacts-info-adress-number__phone phone-second" href="#">(8452) 49 33 33</a>
+									<a  class="contacts-info-adress-number__phone" href="#">8 800 775 64 44</a>
+									<a class="contacts-info-adress-number__phone" href="#">(8452) 49 33 33</a>
 								</div>
 							</div>
 						</div>
@@ -185,9 +159,9 @@
 			</div>
 		</section>
 	</footer>
-	
 	<script src="vendors/jQuery/jquery-3.0.0.min.js"></script> 
     <script src="js/scripts.js" type="text/javascript"></script>
     <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
+    <script src="vendors/fancybox/jquery.fancybox.min.js"></script>
 </body>
 </html>

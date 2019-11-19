@@ -1,10 +1,13 @@
 <section class="blog-item">
     <div class="container">
         <div class="blog-item-wrap">
-            <div class="page-header">
-                <img src="/wp-content/themes/ovk-theme/assets/img/header/title-line.png" alt="">
-                <h1 class="regular-title">Блог</h1>
+            <div class="secondary-title__wrap">
+                <h1 class="secondary-title"><?php echo get_the_category()[0]->name; ?></h1>
             </div>
+            <!-- <div class="page-header">
+                <img src="/wp-content/themes/ovk-theme/assets/img/header/title-line.png" alt="">
+                <h1 class="regular-title"><?php echo get_the_category()[0]->name; ?></h1>
+            </div> -->
             <div class="bread-crums"> </div>
             <div class="blog-item-content">
                 <h1 class="simple-title blog-item-padding"><?php echo the_title(); ?></h1>
