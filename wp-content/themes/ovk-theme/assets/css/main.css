@@ -4476,6 +4476,13 @@ input[type='number'] {
   background: #006eb6;
   transition: 0.3s;
 }
+.zaimy-banner-options__button__active:after{
+  width: 100%;
+}
+
+.zaimy-banner-options__button__active {
+  color: #006eb6;
+}
 
 .zaimy-banner-options__button:hover {
   color: #006eb6;

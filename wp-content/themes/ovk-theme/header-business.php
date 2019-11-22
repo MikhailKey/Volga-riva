@@ -9,7 +9,7 @@
 	<link rel="shortcut icon" type='image/png' href="img/icons/favicon.ico" />
     <title><?php echo wp_get_document_title(); ?></title>
     <?php wp_head(); ?>
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
 	function disableSelection(target){
 	if (typeof target.onselectstart!="undefined")
 		target.onselectstart=function(){return false}
@@ -19,7 +19,7 @@
 		target.onmousedown=function(){return false}
 	target.style.cursor = "default"
 	}
-	</script>
+	</script> -->
 </head>
 <body>
     <div class="city-modal">
@@ -64,7 +64,7 @@
                 <button data-adress="Ул. Советская 86/70 (угол ул. Пугачева), Литер А"
                         data-first-phone="8 (8452) 49-33-33"
                         data-second-phone="8 (800) 775-64-44 (факс)" 
-                        class="city-choose__button">Другое</button>
+                        class="city-choose__button">Другой</button>
                 </div>
             </div>
         </div>
@@ -116,7 +116,7 @@
                                 <button data-adress="Ул. Советская 86/70 (угол ул. Пугачева), Литер А"
                                         data-first-phone="8 (8452) 49-33-33"
                                         data-second-phone="8 (800) 775-64-44 (факс)" 
-                                        class="navtown-item">Другое</button>
+                                        class="navtown-item">Другой</button>
                             </div>
                             </div>
                             <div class="b-navigation-connect-item">

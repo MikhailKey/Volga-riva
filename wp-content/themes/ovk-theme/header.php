@@ -19,7 +19,7 @@
 	<meta name="keywords" content="ключевые, слова, через, запятую">
 	<link rel="shortcut icon" type='image/png' href="img/icons/favicon.ico" />
 	<?php wp_head(); ?>
-	<script type="text/javascript">
+	<!-- <script type="text/javascript">
 	function disableSelection(target){
 	if (typeof target.onselectstart!="undefined")
 		target.onselectstart=function(){return false}
@@ -29,7 +29,7 @@
 		target.onmousedown=function(){return false}
 	target.style.cursor = "default"
 	}
-	</script>
+	</script> -->
 </head>
 <body>
 	<div class="city-modal">
@@ -40,41 +40,41 @@
 					<h4>Ваш город - Саратов?</h4>
 					<button data-adress="Ул. Советская 86/70 (угол ул. Пугачева), Литер А"
 					data-first-phone="8 (8452) 49-33-33"
-					data-second-phone="8 (800) 775-64-44 (факс)">Да</button>
+					data-second-phone="8 (800) 775-64-44  ">Да</button>
 				</div>
 				<div class="city-choose">
 						<button data-adress="Ул. Советская 86/70 (угол ул. Пугачева), Литер А"
 						data-first-phone="8 (8452) 49-33-33"
-						data-second-phone="8 (800) 775-64-44 (факс)" 
+						data-second-phone="8 (800) 775-64-44  " 
 						class="city-choose__button">Саратов</button>
 				<button data-adress="ул. М. Горького, 28"
 						data-first-phone="8 (800) 755-64-44"
-						data-second-phone="8 (8453) 530-630 (факс)"
+						data-second-phone="8 (8453) 530-630  "
 						class="city-choose__button">Энгельс</button>
 				<button data-adress="ул. Северная, 311/1, оф.19"
 						data-first-phone="8 (8452) 49-33-33"
-						data-second-phone="8 (800) 775 64 44 (факс)"
+						data-second-phone="8 (800) 775 64 44  "
 						class="city-choose__button">Краснодар</button>
 				<button data-adress="Московский пр., 7Е, оф. 226 (БЦ «Плаза»)"
 						data-first-phone="8 (473) 254-64-44"
-						data-second-phone="8 (800) 775 64 44 (факс)"
+						data-second-phone="8 (800) 775 64 44  "
 						class="city-choose__button">Воронеж</button>
 				<button data-adress="ул. Войкова, д.1/1, оф.23"
 						data-first-phone="8 (862) 259-0123"
-						data-second-phone="8 (800) 775 64 44 (факс)"
+						data-second-phone="8 (800) 775 64 44  "
 						class="city-choose__button">Сочи</button>
 				<button data-adress="ул.Минаева 11 (ТРК СПАРТАК), оф.201"
 						data-first-phone="8 (8422) 717-333"
-						data-second-phone="8 (800) 775 64 44 (факс)"
+						data-second-phone="8 (800) 775 64 44  "
 						class="city-choose__button">Ульяновск</button>
 				<button data-adress="ул. Революционная, 18"
 						data-first-phone="8 (917) 301 05 55"
-						data-second-phone="8 (800) 775 64 44 (факс)"
+						data-second-phone="8 (800) 775 64 44  "
 						class="city-choose__button">Вольск</button>
 				<button data-adress="Ул. Советская 86/70 (угол ул. Пугачева), Литер А"
 						data-first-phone="8 (8452) 49-33-33"
-						data-second-phone="8 (800) 775-64-44 (факс)" 
-						class="city-choose__button">Другое</button>
+						data-second-phone="8 (800) 775-64-44  " 
+						class="city-choose__button">Другой</button>
 				</div>
 			</div>
 		</div>
@@ -97,36 +97,36 @@
 						<div class="navtown-list navtop-modal">
 							<button data-adress="Ул. Советская 86/70 (угол ул. Пугачева), Литер А"
 									data-first-phone="8 (8452) 49-33-33"
-									data-second-phone="8 (800) 775-64-44 (факс)" 
+									data-second-phone="8 (800) 775-64-44  " 
 									class="navtown-item">Саратов</button>
 							<button data-adress="ул. М. Горького, 28"
 									data-first-phone="8 (800) 755-64-44"
-									data-second-phone="8 (8453) 530-630 (факс)"
+									data-second-phone="8 (8453) 530-630  "
 									class="navtown-item">Энгельс</button>
 							<button data-adress="ул. Северная, 311/1, оф.19"
 									data-first-phone="8 (8452) 49-33-33"
-									data-second-phone="8 (800) 775 64 44 (факс)"
+									data-second-phone="8 (800) 775 64 44  "
 									class="navtown-item">Краснодар</button>
 							<button data-adress="Московский пр., 7Е, оф. 226 (БЦ «Плаза»)"
 									data-first-phone="8 (473) 254-64-44"
-									data-second-phone="8 (800) 775 64 44 (факс)"
+									data-second-phone="8 (800) 775 64 44  "
 									class="navtown-item">Воронеж</button>
 							<button data-adress="ул. Войкова, д.1/1, оф.23"
 									data-first-phone="8 (862) 259-0123"
-									data-second-phone="8 (800) 775 64 44 (факс)"
+									data-second-phone="8 (800) 775 64 44  "
 									class="navtown-item">Сочи</button>
 							<button data-adress="ул.Минаева 11 (ТРК СПАРТАК), оф.201"
 									data-first-phone="8 (8422) 717-333"
-									data-second-phone="8 (800) 775 64 44 (факс)"
+									data-second-phone="8 (800) 775 64 44  "
 									class="navtown-item">Ульяновск</button>
 							<button data-adress="ул. Революционная, 18"
 									data-first-phone="8 (917) 301 05 55"
-									data-second-phone="8 (800) 775 64 44 (факс)"
+									data-second-phone="8 (800) 775 64 44  "
 									class="navtown-item">Вольск</button>
-							<button data-adress="Ул. Советская 86/70 (угол ул. Пугачева), Литер А"
-									data-first-phone="8 (8452) 49-33-33"
-									data-second-phone="8 (800) 775-64-44 (факс)" 
-									class="navtown-item">Другое</button>
+							<button data-adress="<h3 class='navconnect-phone phone-first'>8 (917) 301 05 55</h3><h3 class='navconnect-phone phone-second'>8 (800) 775 64 44  </h3><span>Головной офис</span>" 
+									data-first-phone=""
+									data-second-phone=""
+									class="navtown-item">Другой</button>
 						</div>
 						</div>
 						<div class="navigation-connect-item">

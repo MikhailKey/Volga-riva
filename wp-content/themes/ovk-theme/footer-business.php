@@ -56,9 +56,9 @@
 			</div>
 		</section>
 	</footer>
-	<script type="text/javascript">
+	<!-- <script type="text/javascript">
 	disableSelection(document.body)
-	</script>
+	</script> -->
 	<?php wp_footer(); ?>
 	<script>
 
